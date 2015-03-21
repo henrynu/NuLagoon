@@ -12,7 +12,7 @@
 
 4. To submit a full-size fund withdraw order, participant send 0.0001BTC or 0.01NBT from the account address to the pool’s deposit address. To submit a half-size fund withdraw order, participant send 0.0002BTC or 0.02NBT from the account address to the pool’s deposit address.
     
-5. Every Friday during the operation of pool A is the accounting day. 10:00AM GMT will be the COB (close of business) time every accounting day. Deposit transactions and withdraw orders sent before COB time every accounting day will be effective that day. Transactions and orders sent afterward will be effective next accounting day.
+5. Every Thursday during the operation of pool A is the accounting day. 10:00AM GMT will be the COB (close of business) time every accounting day. Deposit transactions and withdraw orders sent before COB time every accounting day will be effective that day. Transactions and orders sent afterward will be effective next accounting day.
     
 6. The price of BTC used in the calculation will be the acquirable last trade price at COB time of the accounting day.
 

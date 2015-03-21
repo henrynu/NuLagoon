@@ -30,3 +30,13 @@ For Nubits and Bitcoin:
 For Nubits and Bitcoin:
 
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide5.JPG" width="690" height="468">
+
+ - **Trouble-shooting: Strange address recovery**
+
+If a strange address is used as the first input address in your deposit transaction somehow, don't worry. You can recover that strange address back to your control by dump and import its private key in the debug window console.
+
+For Nubits and Bitcoin:
+
+<img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide6.JPG" width="545" height="98">
+
+<img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide7.JPG" width="658" height="370">
