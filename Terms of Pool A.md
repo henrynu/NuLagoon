@@ -44,8 +44,10 @@ LPC and exchange.
 
 3. NAV of the pool will be calculated by the following formulas:
 
-Total asset = Holding of NBT + Holding of BTC * BTC price - Total asset in previous accounting day * manage fee rate
+Total asset = Holding of NBT + Holding of BTC * BTC price 
 
-Custodian Fee wait to be granted = Custodian Fee to be granted in previous accounting day + Total Asset * custodian fee rate * days
+Custodian Fee = Custodian Fee in previous accounting day + Total Asset in previous accounting day * custodian fee rate * days
 
-NAV = (total asset + custodian fee wait to be granted) / total number of shares
+Manage Fee = Manage Fee in previous accounting day + Total asset in previous accounting day * manage fee rate * days
+
+NAV = (total asset + custodian fee - Manage Fee) / total number of shares
