@@ -6,9 +6,10 @@ I am excited to announce that the Nu Lagoon pool A now open for fund deposit. Po
 
 - **Deposit addresses:** 
 
->BTC: 3NuyG4RdbaFksCcRuthCAQmx6HfJcJ3Upi 
+
+>BTC: 3NuyG4RdbaFksCcRuthCAQmx6HfJcJ3Upi  [>>>][1]
 ---------------------------------------------------------
->NBT: BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX
+>NBT: BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX  [>>>][2]
 ---------------------------------------------------------
 
 
@@ -30,6 +31,7 @@ Extremely easy. Send BTC or NBT to deposit address listed above. Send 0.0001 BTC
  - **What else I should know?**
 
 Please carefully read the terms of the Nu Lagoon Pool A. Participating the pool means you understand and agree with the terms of the pool. 
+
 
 
 Fund Deposit & Withdraw Guide for the Nu Lagoon
@@ -74,3 +76,10 @@ For Nubits and Bitcoin:
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide6.JPG" width="545" height="98">
 
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide7.JPG" width="658" height="370">
+
+
+----------
+
+
+  [1]: https://blockchain.info/address/3NuyG4RdbaFksCcRuthCAQmx6HfJcJ3Upi
+  [2]: http://blockexplorer.nu/address/BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX/1/newest
