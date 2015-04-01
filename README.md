@@ -7,9 +7,9 @@ I am excited to announce that the Nu Lagoon pool A now open for fund deposit. Po
 - **Deposit addresses:** 
 
 
->BTC: 3NuyG4RdbaFksCcRuthCAQmx6HfJcJ3Upi  [>>>][1]
+>BTC: 3NuyG4RdbaFksCcRuthCAQmx6HfJcJ3Upi  [>>][1]
 ---------------------------------------------------------
->NBT: BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX  [>>>][2]
+>NBT: BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX  [>>][2]
 ---------------------------------------------------------
 
 
