@@ -38,7 +38,7 @@ LPC and exchange.
 
 **Fee and Calculation**
 
-1. Now the daily custodian fee rate is 0.34%. 0.1% is manage fee rate, 0.24% is participants' expected return rate.
+1. Now the daily custodian fee rate is 0.34%. The daily custodian fee rate could be adjusted by new motions passed by Nu Shareholder. The dividing ratio of custodian fee between pool manager and pool participants is 10:24.
 
 2. The custodian fee rate could be adjusted by the terms in motion of the Nu Lagoon or another motion passed by shareholders in future. A new fee rate will be announced as soon as possible after it is decided, and it will only begin effect at an accounting day in future. 
 
