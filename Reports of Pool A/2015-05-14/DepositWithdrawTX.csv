@@ -1,0 +1,3 @@
+TXDateTime,EffectDate,Type,CCY,Amount,UserAddr,PoolAddr,BlockHeight,TXHash,Status
+2015-05-11T17:01:09Z,2015-05-14,WdOrder1,NBT,0.01,B8NtgEGgsRaVhpLtd8pBximpszecpezGyc,BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX,349215,8e3583cc25f00818f954250926f3edf25feff062c3b70197723313c7c63b2507,Confirmed
+2015-05-14T09:31:36Z,2015-05-14,Withdraw1,NBT,-2016.14,B8NtgEGgsRaVhpLtd8pBximpszecpezGyc,LGdraBCznbtQjM6V7jWUyrcn9Uzihy4Y3,352816,e4c713c39efeb73967b57a246f36766bea5531b55d6b50427e52ccc3d8ad9a9b,Confirmed
