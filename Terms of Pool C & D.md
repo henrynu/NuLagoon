@@ -2,7 +2,7 @@
 
 **Participants:**
 
-1. Pool C and Pool D will accept deposit in BTC and NBT. The BTC deposit address for Pool C is: aaaaa, and NBT deposit address for Pool C is: bbbbb. The BTC deposit address for Pool D is: ccccc, and NBT deposit address for Pool D is: ddddd. Deposit transactions is public for anyone on the blockchains..
+1. Pool C and Pool D will accept deposit in BTC and NBT. The BTC deposit address for Pool C is: 34FJToKhDrmpn4amrm52hi12ZMVmD2jc16 , and NBT deposit address for Pool C is: BAFCWvEdNWrvMKf8JNA5SFYMR8Zvy7f6oH. The BTC deposit address for Pool D is: 3CK8gCzNo8gNmAvbgv2gaT3vGfUT91fYne , and NBT deposit address for Pool D is: BBiHdUVB8Sndf1tCNfBNpRZx53pK7Go8JK . Deposit transactions is public for anyone on the blockchains..
 
 2. The send-from address of every deposit transaction will be the participant's account address, which is also the address to receive fund withdraw in future. If multiple inputs are used to deposit funds, the address in the first input will be the participant's account address.
 
