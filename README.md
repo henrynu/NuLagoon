@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/logo/PoolACD-s.jpg" >
+
 # NuLagoon
 Innovative Nubits Liquidity Group Pools
 
@@ -54,7 +56,7 @@ The pool C’s annual interest rate will be fixed before every accounting period
 
  - **What else I should know?**
 
-It is useful to check the official thread on Nubits forum: [Pool A][7], [Pool C & D][8]. And, please carefully read the terms of the Nu Lagoon Pool A. Participating the pool means you understand and agree with the terms of the pool. 
+It is useful to check the official thread on Nubits forum: [Pool A][7], [Pool C & D][8]. And, please carefully read [Terms of Pool A][9], [Terms of Pool C & D][10]. Participating the pool means you understand and agree with the terms of the pool. 
  
  
 
@@ -114,3 +116,5 @@ For Nubits and Bitcoin:
   [6]: http://blockexplorer.nu/address/BBiHdUVB8Sndf1tCNfBNpRZx53pK7Go8JK/1/newest
   [7]: https://discuss.nubits.com/t/nu-lagoon-the-nu-lagoon-is-supportting-bitcoin-co-id-now-nav-1-062-14-may/1777
   [8]: https://discuss.nubits.com/t/preann-the-creation-of-nu-lagoon-pool-c-and-pool-d-the-first-liquidity-pool-immune-to-btc-volatility-and-the-first-leveraged-liquidity-pool/2161
+  [9]: https://github.com/henrynu/NuLagoon/blob/master/Terms%20of%20Pool%20A.md
+  [10]: https://github.com/henrynu/NuLagoon/blob/master/Terms%20of%20Pool%20C%20%26%20D.md
