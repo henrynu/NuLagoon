@@ -1,7 +1,6 @@
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/logo/PoolACD-s.jpg" >
 
-# NuLagoon
-Innovative Nubits Liquidity Group Pools
+NuLagoon: Innovative Nubits Liquidity Group Pools
 
 As the first Nubits liquidity group pool pioneer, the Nu Lagoon offer multiple pools to people of different risk appetite and provide the easiest way of participation. All you need to do is to send fund or withdraw order to the pool's deposit address.
 
