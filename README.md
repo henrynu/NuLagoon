@@ -7,7 +7,7 @@ As the first Nubits liquidity group pool pioneer, the Nu Lagoon offer multiple p
 - **Pool A: the first liquidity pool. Deposit addresses:** 
 
 
->BTC: 3NuyG4RdbaFksCcRuthCAQmx6HfJcJ3Upi  [>>][1]
+>BTC: 1PwUThmFLvUHp4WYoeDL15GggrHkD3Capw  [>>][1]
 ---------------------------------------------------------
 >NBT: BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX  [>>][2]
 ---------------------------------------------------------
@@ -16,7 +16,7 @@ As the first Nubits liquidity group pool pioneer, the Nu Lagoon offer multiple p
 - **Pool C: the first liquidity pool immune to BTC volatility. Deposit addresses:** 
 
 
-> BTC: 34FJToKhDrmpn4amrm52hi12ZMVmD2jc16  [>>][3]
+> BTC: 1CgLY4f29QP5veVrDUUfemRkgekgK4cDu6  [>>][3]
 ---------------------------------------------------------
 > NBT: BAFCWvEdNWrvMKf8JNA5SFYMR8Zvy7f6oH  [>>][4]
 ---------------------------------------------------------
@@ -25,7 +25,7 @@ As the first Nubits liquidity group pool pioneer, the Nu Lagoon offer multiple p
  - **Pool D: the first leveraged liquidity pool. Deposit addresses:** 
 
 
-> BTC: 3CK8gCzNo8gNmAvbgv2gaT3vGfUT91fYne  [>>][5]
+> BTC: 19eGo6grxSqXSQqugw3N7NxKopggWzEyec  [>>][5]
 ---------------------------------------------------------
 
 
@@ -107,11 +107,11 @@ For Nubits and Bitcoin:
 ----------
 
 
-  [1]: https://blockchain.info/address/3NuyG4RdbaFksCcRuthCAQmx6HfJcJ3Upi
+  [1]: https://blockchain.info/address/1PwUThmFLvUHp4WYoeDL15GggrHkD3Capw
   [2]: http://blockexplorer.nu/address/BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX/1/newest
-  [3]: https://blockchain.info/address/34FJToKhDrmpn4amrm52hi12ZMVmD2jc16
+  [3]: https://blockchain.info/address/1CgLY4f29QP5veVrDUUfemRkgekgK4cDu6
   [4]: http://blockexplorer.nu/address/BAFCWvEdNWrvMKf8JNA5SFYMR8Zvy7f6oH/1/newest
-  [5]: https://blockchain.info/address/3CK8gCzNo8gNmAvbgv2gaT3vGfUT91fYne
+  [5]: https://blockchain.info/address/19eGo6grxSqXSQqugw3N7NxKopggWzEyec
   [6]: http://blockexplorer.nu/address/BBiHdUVB8Sndf1tCNfBNpRZx53pK7Go8JK/1/newest
   [7]: https://discuss.nubits.com/t/nu-lagoon-the-nu-lagoon-is-supportting-bitcoin-co-id-now-nav-1-062-14-may/1777
   [8]: https://discuss.nubits.com/t/preann-the-creation-of-nu-lagoon-pool-c-and-pool-d-the-first-liquidity-pool-immune-to-btc-volatility-and-the-first-leveraged-liquidity-pool/2161
