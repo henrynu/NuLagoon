@@ -1,0 +1,2 @@
+TXDateTime,EffectDate,Type,Pool,CCY,Amount,UserAddr,PoolAddr,BlockHeight,TXHash,Status
+2015-06-06T06:54:12Z,2015-06-11,Deposit,A,NBT,2132.4854,BAyo5mdCNEfAizddvpswXjuuhXUYSTx7m1,BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX,383994,82a62c8281fd13228254b396fa735c2c51d7b1b937010f0bfc00f096e8214bf1,Confirmed
