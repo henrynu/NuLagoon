@@ -12,15 +12,19 @@
 
 4. To submit a full-size fund withdraw order, participant send 0.0001BTC or 0.01NBT from the account address to the pool’s deposit address. To submit a half-size fund withdraw order, participant send 0.0002BTC or 0.02NBT from the account address to the pool’s deposit address.
     
-5. Every Thursday during the operation of pool A is the accounting day. 10:00AM GMT will be the COB (close of business) time every accounting day. Deposit transactions and withdraw orders sent before COB time every accounting day will be effective that day. Transactions and orders sent afterward will be effective next accounting day.
-    
-6. The price of BTC used in the calculation will be the acquirable last trade price at COB time of the accounting day.
+5. To submit a pool share conversion order, participant send 0.001BTC or 0.1NBT from the account address to the deposit address of the pool which participant would like to convert to. The manager will convert shares of all the pools into shares of destination pool at the accounting day. 
 
-7. The number of shares participant get will be: Amount of NBT deposit / NAV or Amount of BTC deposit * BTC price / NAV.
+6. The calculation of conversion will be: The number of shares of destination pool = the number of shares of source pool * NAV of source pool / NAV of destination pool.
+
+7. Every Thursday during the operation of pool A is the accounting day. 10:00AM GMT will be the COB (close of business) time every accounting day. Deposit transactions and withdraw orders sent before COB time every accounting day will be effective that day. Transactions and orders sent afterward will be effective next accounting day.
     
-8. The asset of participant holding will be: The number of shares * NAV.
+8. The price of BTC used in the calculation will be the acquirable last trade price at COB time of the accounting day.
+
+9. The number of shares participant get will be: Amount of NBT deposit / NAV or Amount of BTC deposit * BTC price / NAV.
     
-9. If participants withdraw full-size fund, they will get: The number of shares * NAV (in NBT) or The number of shares * NAV / BTC price (in BTC). If participants withdraw half-size fund, they will withdraw a half of fund and keep another half of fund in the pool. If the number of shares less than
+10. The asset of participant holding will be: The number of shares * NAV.
+    
+11. If participants withdraw full-size fund, they will get: The number of shares * NAV (in NBT) or The number of shares * NAV / BTC price (in BTC). If participants withdraw half-size fund, they will withdraw a half of fund and keep another half of fund in the pool. If the number of shares less than
 2000, participants can only withdraw full-size fund.
 
 **Manager:**
