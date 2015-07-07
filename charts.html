@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nu Lagoon</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- Bootstrap 3.3.4 -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+  <body class="skin-purple-light layout-top-nav fixed">
+    <div class="wrapper">
+
+      <header class="main-header">
+        <nav class="navbar navbar-static-top" role="navigation">
+
+              <a href="index.html" class="navbar-brand"> <b> Nu</b>Lagoon</a>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+              <ul class="nav navbar-nav">
+                    <li class=""><a href="data.html"><span class="glyphicon glyphicon-stats"></span> Data  <span class="sr-only">(current)</span></a></li>
+                  <li class=""><a href="charts.html"><i class="fa fa-fw fa-line-chart"></i> Charts  <span class="sr-only">(current)</span></a></li>
+
+              </ul>
+            </div><!-- /.navbar-collapse -->
+            <!-- Navbar Right Menu -->
+              <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bookmark"></span> Documents <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="index.html#Addr">Pool Addresses</a></li>
+                      <li><a href="index.html#FAQ">FAQ</a></li>
+                      <li><a href="index.html#Guide">Guide</a></li>
+
+                    <li><a href="index.html#Risk">Risk Disclosure</a></li>
+                    <li class="divider"></li>
+                    <li><a href="index.html#TermA">Terms of Pool A</a></li>
+                    <li><a href="index.html#TermCD">Terms of Pool C & D</a></li>
+                  </ul>
+                </li>
+                </ul>
+              </div><!-- /.navbar-custom-menu -->
+
+        </nav>
+      </header>
+      <!-- Full Width Column -->
+      <div class="content-wrapper">
+        <div class="container">
+
+          <!-- Main content -->
+          <section class="content">
+
+
+              <!-- Custom Tabs (Pulled to the right) -->
+              <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs pull-right">
+                  <li id="litab2"><a href="#tab_2" data-toggle="tab"><i class="fa fa-fw fa-pie-chart"></i> Pools Analysis</a></li>
+
+                  <li class="active"><a href="#tab_3-2" data-toggle="tab"><i class="fa fa-fw fa-bar-chart"></i> Performance Overview</a></li>
+
+                  <li class="pull-left header"></li>
+                </ul>
+                <div class="tab-content">
+
+                  <div class="tab-pane active" id="tab_3-2">
+                    <div id="main" class="main" style='height:300px'></div>
+                    <div id="main2" class="main" style='height:155px'></div>
+                    <div id="main3" class="main" style='height:135px'></div>
+
+                  </div><!-- /.tab-pane -->
+                  <div class="tab-pane" id="tab_2">
+                      <div class="row">
+                      <div class="col-md-6">
+
+                      <div class="box box-warning">
+                        <div class="box-header with-border">
+                            <i class="fa fa-fw fa-check-square-o"></i></span>
+
+                          <h3 class="box-title">Pools sizes</h3>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+
+                        <div id="main4" class="main" style='height:500px'>1</div>
+
+                        </div><!-- /.box-body -->
+                          </div>
+                      </div><!-- /.box -->
+
+                      <div class="col-md-6">
+                      <div class="box box-warning">
+                        <div class="box-header with-border">
+                            <i class="fa fa-fw fa-check-square-o"></i></span>
+
+                          <h3 class="box-title">Interest Rate of Pool C</h3>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+
+                            <div id="main5" class="main" style='height:500px'>1</div>
+
+                        </div><!-- /.box-body -->
+                      </div><!-- /.box -->
+                    </div>
+
+                          </div>
+                          <!-- ECharts单文件引入 -->
+                  </div><!-- /.tab-pane -->
+
+              </div><!-- /.box -->
+          </div>
+
+          </section><!-- /.content -->
+        </div><!-- /.container -->
+      </div><!-- /.content-wrapper -->
+      <footer class="main-footer">
+        <div class="container">
+          <div class="pull-right hidden-xs">
+            <b>Contact:</b> NuLagoon@<a href="https://bitcointalk.org" target="_blank">BitcoinTalk</a>
+          </div>
+          <strong>Copyright &copy; 2015 <a href="http://nulagoon.com">Nu Lagoon</a>.</strong> All rights reserved.
+        </div><!-- /.container -->
+      </footer>
+    </div><!-- ./wrapper -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- SlimScroll -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <!-- FastClick -->
+    <script src='plugins/fastclick/fastclick.min.js'></script>
+    <!-- ChartJS 1.0.1 -->
+    <script src="plugins/chartjs/Chart.min.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js" type="text/javascript"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js" type="text/javascript"></script>
+    <script src='js/config.js' type="text/javascript"></script>
+<!-- ECharts单文件引入 -->
+        <script src="dist/js/echarts.js" type="text/javascript"></script>
+        <script src="js/charts.js" type="text/javascript"> </script>
+        <script src="js/charts2.js" type="text/javascript"> </script>
+
+  </body>
+</html>
