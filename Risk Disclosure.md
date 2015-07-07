@@ -1,4 +1,3 @@
-Risk Disclosure:
 
 Risks of investing in Nu Lagoon liquidity pools includes but not limits to:
 
