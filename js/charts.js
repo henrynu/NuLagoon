@@ -4,7 +4,7 @@ function kformat(val){
 // 路径配置
 require.config({
     paths: {
-        echarts: 'dist/js'
+        echarts: 'http://echarts.baidu.com/build/dist'
     }
 });
 // 使用
