@@ -1,5 +1,3 @@
-Fund Deposit & Withdraw Guide for the Nu Lagoon
------------------------------------------------
 
 To deposit fund or submit a withdraw order to the Nu Lagoon, you need to use the coin control feature. Here is a guide for anyone not familiar with it.
 
