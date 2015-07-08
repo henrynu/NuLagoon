@@ -4,10 +4,10 @@ function bartext ( d ) {
     var html = "<b>"+d[0]+"</b>";
     var textclass = "";
     if (d[1]>0){
-        textclass = "text-red";
+        textclass = "text-green";
         sign = '+';
     }else if(d[1]<0){
-        textclass = "text-green";
+        textclass = "text-red";
         sign = '';
     }
     html = html + '<span class="'+textclass+'"> ' + sign + d[1];

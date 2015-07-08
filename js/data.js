@@ -93,7 +93,26 @@ $(document).ready(function() {
         {"data":"4"},
         {"data":"5"},
         {"data":"6"},
+        {
+            "render": function ( data, type, row ) {
+                var pl = row[6]-data*row[4];
+                sign = '';
+                textclass = "";
+                if (Math.round(pl*10)==0){return "-";}
+                if (pl>0){
+                    textclass = "text-green";
+                    sign = '+';
+                }else if(pl<0){
+                    textclass = "text-red";
+                    sign = '';
+                }
 
+                res =  '<span class="'+textclass+'"> ' + sign + (Math.round(pl*100)/100).toString()
+                    + '('+sign+Math.round(pl*10000/(data*row[4]))/100+'%)</span>';
+                return res;
+            },
+            "targets": 7
+        },
         ],
         "order": [[ 6, "desc" ]]
     } );

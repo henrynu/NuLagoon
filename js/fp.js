@@ -89,7 +89,7 @@ $(function () {
       scrollTop: 0
     }, 500);
   });
-  $(".navbar-custom-menu li:not(.treeview) a").click(function () {
+  $(".navbar-nav .dropdown-menu li:not(.treeview) a").click(function () {
     var $this = $(this);
     var target = $this.attr("href");    
     if (typeof target === 'string') {
