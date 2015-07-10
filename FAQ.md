@@ -24,6 +24,7 @@ NuLagoon is not a Ponzi, because:
 
 2. NuLagoon always can provide full-size fund withdraw, even if all the participants decide to withdraw their fund at the same time.
 
+
  - **What else I should know?**
 
 It is useful to check the official thread on Nubits forum: [Pool A][1], [Pool C & D][2]. And, please carefully read [Terms of Pool A][3], [Terms of Pool C & D][4]. Participating the pool means you understand and agree with the terms of the pool. 
