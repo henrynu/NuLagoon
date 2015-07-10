@@ -20,9 +20,9 @@ The pool C’s annual interest rate will be fixed before every accounting period
 
 NuLagoon is not a Ponzi, because:
 
-1. The interests NuLagoon earned and paid to pool participants DO NOT rely on fund deposit by new participants.
+1) The interests NuLagoon earned and paid to pool participants DO NOT rely on fund deposit by new participants.
 
-2. NuLagoon always can provide full-size fund withdraw, even if all the participants decide to withdraw their fund at the same time.
+2) NuLagoon always can provide full-size fund withdraw, even if all the participants decide to withdraw their fund at the same time.
 
 
  - **What else I should know?**
