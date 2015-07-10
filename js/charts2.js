@@ -3,7 +3,7 @@ $("#litab2").click(function(){
   //----------------TAB2-------
 require.config({
     paths: {
-        echarts: 'http://echarts.baidu.com/build/dist'
+        echarts: 'dist/js'
     }
 });
 // 使用
