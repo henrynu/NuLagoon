@@ -37,5 +37,7 @@ function bartext ( d ) {
                     pauseOnHover: true,
                     duplicated: true,
                 });
-        }});
+                $("#toTop").scrollToTop();
+        }}
+        );
 
