@@ -1,34 +1,3 @@
-/* Formatting function for row details - modify as you need */
-function format ( d ) {
-    // `d` is the original data object for the row
-
-    var url='';
-    if(d[4] == 'NBT'){
-    url =  'https://blockexplorer.nu/transactions/'+d[9];
-    }else if(d[4] == 'BTC')
-    {
-    url =  'https://blockchain.info/tx/'+d[9];
-    }
-
-    return '<table class="table table-bordered table-striped">'+
-        '<tr>'+
-            '<td>Block Height:</td>'+
-            '<td>'+d[8]+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Pool Address:</td>'+
-            '<td>'+d[7]+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>TX Hash:</td>'+
-            '<td>'+d[9]+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td></td>'+
-            '<td><a target="_blank" href="'+url+'">View It On Blockexplorer</a></td>'+
-        '</tr>'+
-    '</table>';
-}
 
 $(document).ready(function() {
     //$('#main').html( '<table class="table table-bordered table-striped" id="example">    </table>' );
@@ -36,6 +5,8 @@ $(document).ready(function() {
     $('#nav_a').DataTable( {
         "lengthMenu": [[15, 25, 50, -1], [15, 25, 50, "All"]],
         "ajax": jpath+'nav.json',
+        responsive: true,
+        "bRetrieve": true,
         "columns": [{"data":"0"},
         {"data":"1"},
         {"data":"4"},
@@ -49,11 +20,13 @@ $(document).ready(function() {
         {"data":"17"}],
         "order": [[ 0, "desc" ]]
     } );
-
-
+} );
+$("#litab12").click(function(){
      var tncd = $('#nav_cd').DataTable( {
             "lengthMenu": [[15, 25, 50, -1], [15, 25, 50, "All"]],
             "ajax": jpath+'nav.json',
+            responsive: true,
+            "bRetrieve": true,
             "columns": [{"data":"0"},
             {"data":"2"},
             {"data":"3"},
@@ -61,12 +34,7 @@ $(document).ready(function() {
             {"data":"7"},
             {"data":"8"},
             {"data":"9"},
-                    {
-                "render": function ( data, type, row ) {
-                    return row[10] + '%';},
-                "targets": 10
-            },
-
+            {"data":"10"},
             {"data":"15"},
             {"data":"18"},
             {"data":"19"}],
@@ -79,9 +47,12 @@ $(document).ready(function() {
             return true;
         }
     );
-
+});
+$("#litab2").click(function(){
     $('#position').DataTable( {
         "ajax": jpath+'position.json',
+        responsive: true,
+        "bRetrieve": true,
         "lengthMenu": [[15, 25, 50, -1], [15, 25, 50, "All"]],
         "columnDefs": [
         {"data":"0"},
@@ -99,32 +70,33 @@ $(document).ready(function() {
         {"data":"5"},
         {"data":"6"},
         {
-            "render": function ( data, type, row ) {
-                var pl = row[6]-data*row[4];
-                sign = '';
-                textclass = "";
-                if (Math.round(pl*10)==0){return "-";}
-                if (pl>0){
-                    textclass = "text-green";
-                    sign = '+';
-                }else if(pl<0){
-                    textclass = "text-red";
+                "render": function ( data, type, row ) {
+                    var pl = row[6]-data*row[4];
                     sign = '';
-                }
-
-                res =  '<span class="'+textclass+'"> ' + sign + (Math.round(pl*100)/100).toString()
-                    + '('+sign+Math.round(pl*10000/(data*row[4]))/100+'%)</span>';
-                return res;
+                    if (pl>0){
+                        textclass = "text-green";
+                        sign = '+';
+                    }else if(pl<0){
+                        textclass = "text-red";
+                        sign = '';
+                    }
+                    res =  '<span class="'+textclass+'"> ' + sign + (Math.round(pl*100)/100).toString()
+                        + '('+sign+Math.round(pl*1000/(data*row[4]))/100+'%)</span>';
+                    return res;
+                },
+                "targets": 7
             },
-            "targets": 7
-        },
         ],
         "order": [[ 6, "desc" ]]
     } );
+});
 
-    var table = $('#transaction').DataTable( {
+$("#litab3").click(function(){
+var table = $('#transaction').DataTable( {
         "lengthMenu": [[15, 25, 50, -1], [15, 25, 50, "All"]],
         "ajax": jpath+"transaction.json",
+        "bRetrieve": true,
+        "responsive": true,
         "columns": [
             {"data":"0"},
             {"data":"1"},
@@ -139,32 +111,27 @@ $(document).ready(function() {
             {"data":"4"},
             {"data":"5"},
             {"data":"6"},
-            {
-                "className":      'details-control',
-                "orderable":      false,
-                "data":           null,
-                "defaultContent": ''
+            {"data":"7"},
+            {"data":"8"},
+            {"data":"9"},
+            {   "render": function ( data, type, row ) {
+                    var url='';
+                    if(row[4] == 'NBT'){
+                    url =  'https://blockexplorer.nu/transactions/'+row[9];
+                    }else if(row[4] == 'BTC')
+                    {
+                    url =  'https://blockchain.info/tx/'+row[9];
+                    }
+
+                    return '<a target="_blank" href="'+url+'">View It On Blockexplorer</a>';
+                },
+                "targets": 10
             },
         ],
         "order": [[1, 'desc']]
     } );
 
-    // Add event listener for opening and closing details
-    $('#transaction tbody').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = table.row( tr );
-
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( format(row.data()) ).show();
-            tr.addClass('shown');
-        }
-    } );
-} );
+});
 
 
+ 
