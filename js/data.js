@@ -55,7 +55,6 @@ $("#litab2").click(function(){
         "bRetrieve": true,
         "lengthMenu": [[15, 25, 50, -1], [15, 25, 50, "All"]],
         "columns": [
-        {"data":"1"},
         {"data":"4"},
         {
                 "render": function ( data, type, row ) {
@@ -66,6 +65,7 @@ $("#litab2").click(function(){
                 "targets": 3
             },
         {"data":"6"},
+        {"data":"1"},
         {
                 "render": function ( data, type, row ) {
                     var pl = row[6]-row[7]*row[4];
@@ -105,7 +105,7 @@ $("#litab2").click(function(){
         {"data":"0"}
         ],
 
-        "order": [[ 3, "desc" ]]
+        "order": [[ 2, "desc" ]]
     } );
 });
 
@@ -116,7 +116,7 @@ var table = $('#transaction').DataTable( {
         "bRetrieve": true,
         "responsive": true,
         "columns": [
-            {"data":"6"},
+            {"data":"1"},
             {"data":"2"},
             {"data":"5"},
             {"data":"4"},
@@ -127,7 +127,7 @@ var table = $('#transaction').DataTable( {
                 },
                 "targets": 3
             },
-            {"data":"1"},
+            {"data":"6"},
             {"data":"0"},
             {"data":"8"},
             {"data":"7"},
