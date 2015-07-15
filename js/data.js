@@ -51,27 +51,24 @@ $("#litab12").click(function(){
 $("#litab2").click(function(){
     $('#position').DataTable( {
         "ajax": jpath+'position.json',
-        responsive: true,
+        "responsive": true,
         "bRetrieve": true,
         "lengthMenu": [[15, 25, 50, -1], [15, 25, 50, "All"]],
-        "columnDefs": [
-        {"data":"0"},
+        "columns": [
         {"data":"1"},
-        {"data":"2"},
+        {"data":"4"},
         {
                 "render": function ( data, type, row ) {
-                    if(data=='A'){return '<span class="badge bg-yellow">A</span>';}
-                    else if(data=='C'){return '<span class="badge label-success">C</span>';}
-                    else if(data=='D'){return '<span class="badge label-info">D</span>';}
+                    if(row[3]=='A'){return '<span class="badge bg-yellow">A</span>';}
+                    else if(row[3]=='C'){return '<span class="badge label-success">C</span>';}
+                    else if(row[3]=='D'){return '<span class="badge label-info">D</span>';}
                 },
                 "targets": 3
             },
-        {"data":"4"},
-        {"data":"5"},
         {"data":"6"},
         {
                 "render": function ( data, type, row ) {
-                    var pl = row[6]-data*row[4];
+                    var pl = row[6]-row[7]*row[4];
                     sign = '';
                     if (pl>0){
                         textclass = "text-green";
@@ -81,13 +78,34 @@ $("#litab2").click(function(){
                         sign = '';
                     }
                     res =  '<span class="'+textclass+'"> ' + sign + (Math.round(pl*100)/100).toString()
-                        + '('+sign+Math.round(pl*1000/(data*row[4]))/100+'%)</span>';
+                        +'</span>';
                     return res;
                 },
                 "targets": 7
             },
+            {
+                "render": function ( data, type, row ) {
+                    var pl = row[6]-row[7]*row[4];
+                    sign = '';
+                    if (pl>0){
+                        textclass = "text-green";
+                        sign = '+';
+                    }else if(pl<0){
+                        textclass = "text-red";
+                        sign = '';
+                    }
+                    res =  '<span class="'+textclass+'"> ' + sign+Math.round(pl*10000/(data*row[4]))/100+'%</span>';
+                    return res;
+                },
+                "targets": 8
+            },
+        {"data":"2"},
+        {"data":"5"},
+        {"data":"7"},
+        {"data":"0"}
         ],
-        "order": [[ 6, "desc" ]]
+
+        "order": [[ 3, "desc" ]]
     } );
 });
 
@@ -98,21 +116,21 @@ var table = $('#transaction').DataTable( {
         "bRetrieve": true,
         "responsive": true,
         "columns": [
-            {"data":"0"},
-            {"data":"1"},
+            {"data":"6"},
             {"data":"2"},
+            {"data":"5"},
+            {"data":"4"},
             {   "render": function ( data, type, row ) {
-                    if(data=='A'){return '<span class="badge bg-yellow">A</span>';}
-                    else if(data=='C'){return '<span class="badge label-success">C</span>';}
-                    else if(data=='D'){return '<span class="badge label-info">D</span>';}
+                    if(row[3]=='A'){return '<span class="badge bg-yellow">A</span>';}
+                    else if(row[3]=='C'){return '<span class="badge label-success">C</span>';}
+                    else if(row[3]=='D'){return '<span class="badge label-info">D</span>';}
                 },
                 "targets": 3
             },
-            {"data":"4"},
-            {"data":"5"},
-            {"data":"6"},
-            {"data":"7"},
+            {"data":"1"},
+            {"data":"0"},
             {"data":"8"},
+            {"data":"7"},
             {"data":"9"},
             {   "render": function ( data, type, row ) {
                     var url='';
@@ -128,7 +146,7 @@ var table = $('#transaction').DataTable( {
                 "targets": 10
             },
         ],
-        "order": [[1, 'desc']]
+        "order": [[6, 'desc']]
     } );
 
 });
