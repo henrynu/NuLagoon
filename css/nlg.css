@@ -6,8 +6,11 @@ tr.shown td.details-control {
     background: url('../img/details_close.png') no-repeat center center;
 }
 div.container{
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+.nav-tabs-custom>.tab-content {
+padding:10px 3px;
 }
 img.logoss{width: 25px;
   height: 25px;
