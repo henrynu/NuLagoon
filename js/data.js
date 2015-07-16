@@ -94,7 +94,7 @@ $("#litab2").click(function(){
                         textclass = "text-red";
                         sign = '';
                     }
-                    res =  '<span class="'+textclass+'"> ' + sign+Math.round(pl*10000/(data*row[4]))/100+'%</span>';
+                    res =  '<span class="'+textclass+'"> ' + sign+Math.round(pl*10000/(row[7]*row[4]))/100+'%</span>';
                     return res;
                 },
                 "targets": 8
