@@ -34,7 +34,13 @@ $("#litab12").click(function(){
             {"data":"7"},
             {"data":"8"},
             {"data":"9"},
-            {"data":"10"},
+            {
+                "render": function ( data, type, row ) {
+                    return row[10]+' %';
+                },
+                "targets": 8
+            },
+
             {"data":"15"},
             {"data":"18"},
             {"data":"19"}],
