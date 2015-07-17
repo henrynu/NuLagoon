@@ -24,6 +24,15 @@ NuLagoon is not a Ponzi, because:
 
 2) NuLagoon always can provide full-size fund withdraw, even if all the participants decide to withdraw their fund at the same time.
 
+ - **What could be the case involving a loss?**
+
+To give a very rough estimation, if about half of the fund in the pool is stay on BTC.
+
+For Pool A, the custodian fee earned for a week is about 1.68%. So if BTC price drop over 3.36% in a week, there will be a loss for pool C.
+
+For Pool C, NAV will never decrease, if no default event occurs.
+
+For Pool D, the size of Pool D is about 2 times of the size of Pool C. the custodian fee pool C and D earned for a week is about 1.68%. If BTC price drop over 3% in a week, there will be a loss for pool D.
 
  - **What else I should know?**
 
