@@ -45,7 +45,7 @@ function bartext ( d ) {
     var html = "<b>"+d[0]+"</b>";
     var textclass = "";
     if (d[1]>0){
-        textclass = "text-green";
+        textclass = "text-greenl";
         sign = '+';
     }else if(d[1]<0){
         textclass = "text-red";

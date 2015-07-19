@@ -38,6 +38,9 @@ color:white;
 .scrollUp p{
 padding:5px 5px;
 }
+.scrollUp span.text-greenl{
+color:#3BE597;
+}
 .scrollUp {
   height:40px; /* the plugin works for responsive layouts so width is not necessary */
   overflow: hidden;
