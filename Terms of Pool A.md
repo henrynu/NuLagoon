@@ -16,15 +16,17 @@
 
 6. The calculation of conversion will be: The number of shares of destination pool = the number of shares of source pool * NAV of source pool / NAV of destination pool.
 
-7. Every Thursday during the operation of pool A is the accounting day. 10:00AM GMT will be the COB (close of business) time every accounting day. Deposit transactions and withdraw orders sent before COB time every accounting day will be effective that day. Transactions and orders sent afterward will be effective next accounting day.
+7. Every Monday and every Thursday during the operation of pool A is the accounting day. 8:00AM GMT will be the COB (close of business) time every accounting day. Deposit transactions and withdraw orders sent before COB time every accounting day will be effective that day. Transactions and orders sent afterward will be effective next accounting day.
     
 8. The price of BTC used in the calculation will be the acquirable last trade price at COB time of the accounting day.
 
 9. The number of shares participant get will be: Amount of NBT deposit / NAV or Amount of BTC deposit * BTC price / NAV.
     
 10. The asset of participant holding will be: The number of shares * NAV.
+
+11. Withdraw fee is 1 NBT per NBT withdraw transaction or 0.004 BTC per BTC withdraw transaction. All the withdraw fee will be added to the total asset of the pools, and thus benefit remaining pool users.
     
-11. If participants withdraw full-size fund, they will get: The number of shares * NAV (in NBT) or The number of shares * NAV / BTC price (in BTC). If participants withdraw half-size fund, they will withdraw a half of fund and keep another half of fund in the pool. If the number of shares less than
+12. If participants withdraw full-size fund, they will get: The number of shares * NAV - Withdraw Fee (in NBT) or The number of shares * NAV / BTC price - Withdraw Fee (in BTC). If participants withdraw half-size fund, they will withdraw a half of fund and keep another half of fund in the pool. If the number of shares less than
 2000, participants can only withdraw full-size fund.
 
 **Manager:**
