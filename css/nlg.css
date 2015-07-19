@@ -31,17 +31,17 @@ margin-top:-20px;
 height:35px;
 font-size:16px;
 }
-a.ANNurl{
+.scrollUp a{
 padding:2px 4px;
 color:white;
 }
-.marquee {
-  height:35px; /* the plugin works for responsive layouts so width is not necessary */
+.scrollUp p{
+padding:5px 5px;
+}
+.scrollUp {
+  height:40px; /* the plugin works for responsive layouts so width is not necessary */
   overflow: hidden;
-  padding-top:6px;
-  margin-left:50px;
-  margin-right:50px;
-  /*background: #3C1688;*/
+  padding-top:2px;
 }
 #toTop {
     display: none;
