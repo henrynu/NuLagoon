@@ -76,6 +76,12 @@ $("#litab2").click(function(){
                 "render": function ( data, type, row ) {
                     var pl = row[6]-row[7]*row[4];
                     sign = '';
+                    if (row[4]==0){
+                        return ' ';
+                    }
+                    if (Math.round(pl*100) == 0){
+                        return ' 0 ';
+                    }
                     if (pl>0){
                         textclass = "text-green";
                         sign = '+';
@@ -93,6 +99,12 @@ $("#litab2").click(function(){
                 "render": function ( data, type, row ) {
                     var pl = row[6]-row[7]*row[4];
                     sign = '';
+                    if (row[4]==0){
+                        return ' ';
+                    }
+                    if (Math.round(pl*100) == 0){
+                        return ' 0% '
+                    }
                     if (pl>0){
                         textclass = "text-green";
                         sign = '+';

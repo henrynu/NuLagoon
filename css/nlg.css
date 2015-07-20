@@ -44,7 +44,7 @@ color:#3BE597;
 .scrollUp {
   height:40px; /* the plugin works for responsive layouts so width is not necessary */
   overflow: hidden;
-  padding-top:2px;
+  padding-top:1px;
 }
 #toTop {
     display: none;
