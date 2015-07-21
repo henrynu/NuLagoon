@@ -1,17 +1,14 @@
-td.details-control {
-    background: url('../img/details_open.png') no-repeat center center;
-    cursor: pointer;
-}
-tr.shown td.details-control {
-    background: url('../img/details_close.png') no-repeat center center;
+div.md {
+font-size: larger;
 }
 div.container{
   padding-right: 2px;
   padding-left: 2px;
 }
 .nav-tabs-custom>.tab-content {
-padding:10px 3px;
+padding:5px 2px;
 }
+@media (max-width:767px){.fixed .content-wrapper,.fixed .right-side{padding-top:50px}}
 img.logoss{width: 25px;
   height: 25px;
 }
