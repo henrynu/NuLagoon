@@ -46,13 +46,30 @@ $.ajax({
     }
 });
 
+$.ajax({
+    url:urlmd['MotionNLG'],
+    dataType:"text",
+    success:function(text){
+        var converter = new showdown.Converter();
+        $("#MotionNLG").find(".md").html(converter.makeHtml(text));
+    }
+});
+
+$.ajax({
+    url:urlmd['MotionFEE'],
+    dataType:"text",
+    success:function(text){
+        var converter = new showdown.Converter();
+        $("#MotionFEE").find(".md").html(converter.makeHtml(text));
+    }
+});
 /*
  * Documentation JS script
  */
 $(function () {
   $(".navbar-nav .dropdown-menu li:not(.treeview) a").click(function () {
     var $this = $(this);
-    var target = $this.attr("href");    
+    var target = $this.attr("href");
     if (typeof target === 'string') {
       $("body").animate({
         scrollTop: ($(target).offset().top - 60 ) + "px"
