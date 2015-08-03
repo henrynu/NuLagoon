@@ -117,7 +117,13 @@ $("#litab2").click(function(){
                 },
                 "targets": 8
             },
-        {"data":"2"},
+        {
+            "render": function ( data, type, row ) {
+                if(row[2]=='BTC'){return '<span class="badge bg-yellow ccy" title="Bitcoin">B</span>';}
+                else if(row[2]=='NBT'){return '<span class="badge bg-black ccy" title="Nubits">N</span>';}
+            },
+            "targets": 2
+        },
         {"data":"5"},
         {"data":"7"},
         {"data":"0"}
@@ -133,11 +139,23 @@ var table = $('#transaction').DataTable( {
         "ajax": jpath+"transaction.json",
         "bRetrieve": true,
         "responsive": true,
+        "columnDefs": [
+    { className: "dt-body-center", "targets": [ 3,5 ] }
+  ],
         "columns": [
             {"data":"1"},
-            {"data":"2"},
+            {
+                "render": function ( data, type, row ) {
+                    if(row[2]=='Deposit'){return '<span class="text-green"><i class="fa fa-sign-in fa-rotate-90"></i> Deposit</span>';}
+                    else if(row[2]=='Convert'){return '<span class=" text-blue"><i class="fa fa-retweet fa-rotate-90"></i> Convert</span>';}
+                    else if(row[2]=='Withdraw1' || row[2]=='Withdraw2'){return '<span class="text-red"><i class="fa fa-sign-out fa-rotate-270 "></i> '+row[2]+'</span>';}
+                    else if(row[2]=='WdOrder1' || row[2]=='WdOrder2'){return '<span class="text-maroon"><i class="fa fa-sign-out fa-rotate-270"></i> '+row[2]+'</span>';}
+                    else {return row[2];}
+                },
+                "targets": 2
+            },
             {"data":"5"},
-            {"data":"4"},
+
             {   "render": function ( data, type, row ) {
                     if(row[3]=='A'){return '<span class="badge bg-yellow">A</span>';}
                     else if(row[3]=='C'){return '<span class="badge label-success">C</span>';}
@@ -146,6 +164,13 @@ var table = $('#transaction').DataTable( {
                 "targets": 3
             },
             {"data":"6"},
+            {
+                "render": function ( data, type, row ) {
+                    if(row[4]=='BTC'){return '<span class="badge bg-yellow ccy" title="Bitcoin">B</span>';}
+                    else if(row[4]=='NBT'){return '<span class="badge bg-black ccy" title="Nubits">N</span>';}
+                },
+                "targets": 4
+            },
             {"data":"0"},
             {"data":"8"},
             {"data":"7"},
