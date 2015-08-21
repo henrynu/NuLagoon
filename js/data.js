@@ -150,6 +150,7 @@ var table = $('#transaction').DataTable( {
                     else if(row[2]=='Convert'){return '<span class=" text-blue"><i class="fa fa-retweet fa-rotate-90"></i> Convert</span>';}
                     else if(row[2]=='Withdraw1' || row[2]=='Withdraw2'){return '<span class="text-red"><i class="fa fa-sign-out fa-rotate-270 "></i> '+row[2]+'</span>';}
                     else if(row[2]=='WdOrder1' || row[2]=='WdOrder2'){return '<span class="text-maroon"><i class="fa fa-sign-out fa-rotate-270"></i> '+row[2]+'</span>';}
+                    else if(row[2]=='Invalid' || row[2]=='InvalidWd'){return '<span class="text-maroon"><i class="fa fa-frown-o"></i> '+row[2]+'</span>';}
                     else {return row[2];}
                 },
                 "targets": 2
