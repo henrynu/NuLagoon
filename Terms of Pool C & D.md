@@ -14,7 +14,7 @@
 
 6. The calculation of conversion will be: The number of shares of destination pool = the number of shares of source pool * NAV of source pool / NAV of destination pool.
 
-7. Every Monday and every Thursday during the operation of pool A is the accounting day. 8:00AM GMT will be the COB (close of business) time every accounting day. Deposit transactions and withdraw orders sent before COB time every accounting day will be effective that day. Transactions and orders sent afterward will be effective next accounting day.
+7. Every Monday and every Thursday during the operation of pool A is the accounting day. 7:00AM GMT will be the COB (close of business) time every accounting day. Deposit transactions and withdraw orders sent before COB time every accounting day will be effective that day. Transactions and orders sent afterward will be effective next accounting day.
 
 8. The price of BTC used in the calculation will be the acquirable last trade price at COB time of the accounting day.
 
