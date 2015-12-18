@@ -1,0 +1,98 @@
+.main-header{
+z-index:1;
+}
+.progress-bar-black {
+  background-color: #222222;
+}
+.progress-striped .progress-bar-black {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+div#pvchart{
+padding-left:10px;
+padding-top:6px;
+}
+div#txschart{
+padding-left:12px;
+padding-top:10px;
+}
+@media (max-width:767px){.fixed .content-wrapper,.fixed .right-side{padding-top:50px}}
+img.logoss{width: 25px;
+  height: 25px;
+}
+img.logos{
+  width: 45px;
+  height: 45px;
+  margin:-8px 5px 0px 5px;
+}
+img.qrcode{width: 128px;
+  height: 128px;
+  margin-left:40px;
+  margin-right:50px;
+}
+.progress.lg,
+.progress-lg {
+  height: 50px;
+
+}
+.progress-bar {
+font-size:18px;
+line-height:45px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+background-color:transparent;
+color:black;
+border:1px solid #3c8dbc;;
+}
+.nav-stacked>li>a {
+width:150px;
+margin-left:20px;
+border-radius:8px;
+font-size:14px;
+border:1px solid transparent;
+padding:9px 9px;
+}
+div#infotab{
+min-height:243px;
+}
+span.badge.switch{
+font-weight:normal;
+font-size: 14px;
+  padding: 8px;
+  margin: -10px 0px;
+  }
+span.badge.register{
+font-weight:bold;
+font-size: 18px;
+  padding: 12px;
+  margin:18px 10px 15px 47px
+  }
+span.badge.register:hover{
+   background-color:#1BC578;
+}
+span.exchange{
+font-size:25px;
+padding:5px;
+}
+span#ask_price,span#bid_price{
+font-size:15px;
+font-weight:800;
+padding:10px;
+}
+span#magic_n,span#magic_b{
+font-weight:800;
+font-size:17px;
+}
+span.ccy{
+font-style:italic;
+font-weight:normal;
+}
+table.dataTable tbody td.HL_Num,table.dataTable tbody td.HL_Price{
+font-size:19px;;
+/*padding:5px 10px;*/
+}
+.lead {
+    font-size: 19px;
+}
