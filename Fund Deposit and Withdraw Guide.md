@@ -1,23 +1,23 @@
+To send transactions to Nu Lagoon Tube / Pools, you need to specify the address which you would like to send from. This is a guide for anyone not familiar with it.
 
-To deposit fund or submit a withdraw order to the Nu Lagoon, you need to use the coin control feature. Here is a guide for anyone not familiar with it.
+NuLagoon recommends [Electrum ](https://electrum.org/#download) and [Nu client](https://www.nubits.com/download) to be the Bitcoin and NuBits wallet.
 
- - **Step1: Enable Coin Control**
+## Send Bitcoin in Electrum
 
-For Nubits:
+<img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/electrum1.JPG" width="668" height="394"> 
+
+<img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/electrum2.JPG" width="668" height="374"> 
+
+## Send NuBits in Nu client
+
+
+- **Step1: Enable Coin Control**
 
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide1.JPG" width="690" height="131"> 
 
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide2.JPG" width="480" height="307"> 
 
-For Bitcoin:
-
-<img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guideA.JPG" width="690" height="112"> 
-
-<img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guideB.JPG" width="601" height="432"> 
-
  - **Step2: Select Inputs**
-
-For Nubits and Bitcoin:
 
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide3.JPG" width="690" height="213"> 
 
@@ -25,7 +25,7 @@ For Nubits and Bitcoin:
 
  - **Step3: Custom change address & send transaction**
 
-For Nubits and Bitcoin:
+For Nubits:
 
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide5.JPG" width="690" height="468">
 
