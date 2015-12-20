@@ -53,8 +53,12 @@ img.qrcode{width: 128px;
   padding:9px 9px;
 }
 
+.panel {
+border:0px;
+}
 div#infotab{
   min-height:243px;
+  border-top: 1px dotted #ddd;
 }
 
 span.badge.switch{
