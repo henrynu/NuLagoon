@@ -156,9 +156,9 @@ $(document).ready(function() {
             },
         {
                 "render": function ( data, type, row ) {
-                    if(row[1]=='RegisterReq'){return '<span class="text-blue" title="Register"><i class="fa fa-fw fa-link"></i></span>';}
-                    else if(row[1]=='TubeOut'){return '<span class="text-green" title="Exchange"><i class="fa fa-fw fa-arrow-right"></i></span';}
-                    else if(row[1].search('Refund')>=0){return '<span class="text-yellow" title="Refund"><i class="fa fa-fw fa-undo"></i></span>';}
+                    if(row[1]=='RegisterReq'){return '<span class="text-blue""><i class="fa fa-fw fa-link"></i><span class="fu">Register</span></span>';}
+                    else if(row[1]=='TubeOut'){return '<span class="text-green"><i class="fa fa-fw fa-arrow-right"></i><span class="fu">Exchange</span></span';}
+                    else if(row[1].search('Refund')>=0){return '<span class="text-yellow" ><i class="fa fa-fw fa-undo"></i><span class="fu">Refund</span></span>';}
                 },
                 "targets": 2
             },
@@ -176,6 +176,7 @@ $(document).ready(function() {
         ],
         "order": [[ 4, "desc" ]],
         "initComplete": function () {
+            $('.dataTables_length,.dataTables_filter').addClass( 'fu' );
             $(table.column( 0 ).nodes() ).addClass( 'led' );
             $(table.column( 2 ).nodes() ).addClass( 'led' );
             $(table.column( 3 ).nodes() ).addClass( 'led' );
@@ -252,7 +253,10 @@ var table = $('#tabbctx').DataTable( {
                 "targets": 10
             },
         ],
-        "order": [[ 0, "desc" ]]
+        "order": [[ 0, "desc" ]],
+        "initComplete": function () {
+            $('.dataTables_length,.dataTables_filter').addClass( 'fu' );
+        }
     } );
 });
 $("#liveap").click(function(){
@@ -260,21 +264,27 @@ var table = $('#addrpair').DataTable( {
         "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
         "ajax": jpath+'addrpair.json',
         responsive: true,
-        columnDefs: [
-            { responsivePriority: 1, targets: 2 },
-            { responsivePriority: 2, targets: 3 }
-        ],
         "bRetrieve": true,
-        "columns": [{"data":"0"},
-        {"data":"1"},
-        {"data":"2"},
+        "columns": [
+            {
+            "render": function ( data, type, row ) {
+                return '<span class="ab">'+row[1].slice(0,6)+'...'+row[1].slice(28,34)+'</span><span class="led fu">'+row[1]+'</span>';
+            },
+            "targets": 1
+        },
+                {
+            "render": function ( data, type, row ) {
+                return '<span class="ab">'+row[2].slice(0,6)+'...'+row[2].slice(28,34)+'</span><span class="led fu">'+row[2]+'</span>';
+            },
+            "targets": 2
+        },
         {"data":"3"},
         {"data":"4"},
+        {"data":"0"},
         ],
-        "order": [[ 0, "desc" ]],
+        "order": [[ 4, "desc" ]],
         "initComplete": function () {
-            $(table.column( 1 ).nodes() ).addClass( 'led' );
-            $(table.column( 2 ).nodes() ).addClass( 'led' );
+            $('.dataTables_length,.dataTables_filter').addClass( 'fu' );
         }
     } );
 });

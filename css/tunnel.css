@@ -46,7 +46,7 @@ img.qrcode{width: 128px;
 }
 .nav-stacked>li>a {
 
-  /*margin-left:20px;*/
+  margin-left:15px;
   border-radius:8px;
   font-size:14px;
   border:1px solid transparent;
@@ -113,7 +113,10 @@ img.st{
 table.dataTable tbody td.led{
   text-align: right;
 }
-
+  div.row div.col-sm-12,div.row div.col-sm-10{
+  padding-right:5px;
+  padding-left:5px;
+  }
 @media screen and (max-width:760px){
   .fixed .content-wrapper,.fixed .right-side{padding-top:50px}
   .nav-stacked>li>a {float: left;}
@@ -129,5 +132,6 @@ table.dataTable tbody td.led{
   .fu {display: none; }
   .ab {display: inline;}
   }
+
 }
 
