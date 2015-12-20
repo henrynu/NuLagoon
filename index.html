@@ -17,6 +17,7 @@
     <!-- Theme style -->
     <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <link href="plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <!--link href="plugins/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" /-->
     <link href="plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet" type="text/css" />
 
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -195,12 +196,9 @@
                       <table class="table-hover" cellspacing="0" width="100%" id="tubetx">
                         <thead>
                         <tr>
-                            <th>Type</th>
-                            <th>Amount</th>
-                            <th>Ccy</th>
+                            <th>Amt_Ccy</th>
                             <th></th>
-                            <th>Amount</th>
-                            <th>Ccy</th>
+                            <th>Amt_Ccy</th>
                             <th>Price</th>
                             <th>TxDateTime</th>
                             <th>From</th>
@@ -213,10 +211,10 @@
                       <table class="table-striped table-hover" cellspacing="0" width="100%" id="tabbctx">
                         <thead>
                         <tr>
-                            <th>TXDateTime</th>
-                            <th>Type</th>
-                            <th>Ccy</th>
+                            <th>DateTime</th>
+                            <th><span class="fu">Type</span></th>
                             <th>Amount</th>
+                            <th>Ccy</th>
                             <th>UserAddr</th>
                             <th>TXSt</th>
                             <th>ProcessSt</th>
@@ -276,7 +274,7 @@
 
     </div><!-- ./wrapper -->
     <!-- jQuery 2.1.4 -->
-    <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.2 JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- DATA TABES SCRIPT -->

@@ -149,42 +149,36 @@ $(document).ready(function() {
         "columns": [
         {
                 "render": function ( data, type, row ) {
-                    if(row[1]=='RegisterReq'){return '<span class="text-blue"><i class="fa fa-fw fa-link"></i>Register</span>';}
-                    else if(row[1]=='TubeOut'){return '<span class="text-green"><i class="fa fa-fw fa-exchange"></i>Exchange</span';}
-                    else if(row[1].search('Refund')>=0){return '<span class="text-yellow"><i class="fa fa-fw fa-undo"></i>Refund</span>';}
-                },
-                "targets": 0
-            },
-        {"data":"3"},
-        {
-                "render": function ( data, type, row ) {
-                    if(row[2]=='BTC'){return '<span class="badge bg-yellow ccy" title="Bitcoin">B</span>';}
-                    else if(row[2]=='NBT'){return '<span class="badge bg-black ccy" title="Nubits">N</span>';}
+                    if(row[2]=='BTC'){return row[3]+' <span class="badge bg-yellow ccy" title="Bitcoin">B</span>';}
+                    else if(row[2]=='NBT'){return row[3]+' <span class="badge bg-black ccy" title="Nubits">N</span>';}
                 },
                 "targets": 1
             },
         {
-                "render": function ( data, type, row ) {return '<span class="glyphicon glyphicon-arrow-right"></span>';} ,
+                "render": function ( data, type, row ) {
+                    if(row[1]=='RegisterReq'){return '<span class="text-blue" title="Register"><i class="fa fa-fw fa-link"></i></span>';}
+                    else if(row[1]=='TubeOut'){return '<span class="text-green" title="Exchange"><i class="fa fa-fw fa-arrow-right"></i></span';}
+                    else if(row[1].search('Refund')>=0){return '<span class="text-yellow" title="Refund"><i class="fa fa-fw fa-undo"></i></span>';}
+                },
                 "targets": 2
             },
-        {"data":"6"},
         {
                 "render": function ( data, type, row ) {
-                    if(row[5]=='BTC'){return '<span class="badge bg-yellow ccy" title="Bitcoin">B</span>';}
-                    else if(row[5]=='NBT'){return '<span class="badge bg-black ccy" title="Nubits">N</span>';}
+                    if(row[5]=='BTC'){return row[6]+' <span class="badge bg-yellow ccy" title="Bitcoin">B</span>';}
+                    else if(row[5]=='NBT'){return row[6]+' <span class="badge bg-black ccy" title="Nubits">N</span>';}
                 },
-                "targets": 4
+                "targets": 3
             },
         {"data":"8"},
         {"data":"0"},
         {"data":"4"},
         {"data":"7"},
         ],
-        "order": [[ 7, "desc" ]],
+        "order": [[ 4, "desc" ]],
         "initComplete": function () {
-            $(table.column( 1 ).nodes() ).addClass( 'lead' );
-            $(table.column( 4 ).nodes() ).addClass( 'lead' );
-            $(table.column( 6 ).nodes() ).addClass( 'lead' );
+            $(table.column( 0 ).nodes() ).addClass( 'led' );
+            $(table.column( 2 ).nodes() ).addClass( 'led' );
+            $(table.column( 3 ).nodes() ).addClass( 'led' );
         }
     } );
 
@@ -194,20 +188,54 @@ var table = $('#tabbctx').DataTable( {
         "lengthMenu": [[12, 25, 60, -1], [12, 25, 60, "All"]],
         "ajax": jpath+'bctx.json',
         responsive: true,
+        columnDefs: [
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: 1 },
+            { responsivePriority: 3, targets: 2 },
+            { responsivePriority: 4, targets: 3 },
+            { responsivePriority: 5, targets: 5 }
+        ],
         "bRetrieve": true,
-        "columns": [{"data":"0"},
-        {"data":"1"},
+        "columns": [
+        {
+                "render": function ( data, type, row ) {
+                    return '<span class="ab">'+row[0].slice(8,16)+'</span><span class="fu">'+row[0]+'</span>';
+                },
+                "targets": 0
+            },
+        {
+                "render": function ( data, type, row ) {
+                    if(row[1]=='TubeIn' || row[1]=='CashDeposit'){return '<span class="text-green"><i class="fa fa-sign-in fa-rotate-90"></i> <span class="fu">'+row[1]+'</span></span>';}
+                    else if(row[1]=='Refund'){return '<span class=" text-blue"><i class="fa fa-retweet fa-rotate-90"></i> <span class="fu">'+row[1]+'</span></span>';}
+                    else if(row[1]=='TubeOut' || row[1]=='CashWithdraw'){return '<span class="text-red"><i class="fa fa-sign-out fa-rotate-270 "></i> <span class="fu">'+row[1]+'</span></span>';}
+                    else if(row[1]=='RegisterReq'){return '<span class="text-blue"><i class="fa fa-link"></i> <span class="fu">'+row[1]+'</span></span>';}
+                    else {return row[1];}
+                },
+                "targets": 1
+            },
+        {"data":"3"},
         {
                 "render": function ( data, type, row ) {
                     if(row[2]=='BTC'){return '<span class="badge bg-yellow ccy" title="Bitcoin">B</span>';}
                     else if(row[2]=='NBT'){return '<span class="badge bg-black ccy" title="Nubits">N</span>';}
                 },
-                "targets": 2
+                "targets": 3
             },
-        {"data":"3"},
         {"data":"4"},
-        {"data":"8"},
-        {"data":"9"},
+            {
+            "render": function ( data, type, row ) {
+                if(row[8]=='Pen'){return '<img class="st" src="img/tx0.png" title="Pending"></img>';}
+                else if(row[8]=='Con'){return '<img class="st" src="img/tx2.png" title="Confirmed"></img>';}
+            },
+            "targets": 5
+        },
+            {
+            "render": function ( data, type, row ) {
+                if(row[9]=='Pen'){return '<img class="st" src="img/tx0.png" title="Pending"></img>';}
+                else if(row[9]=='Con'){return '<img class="st" src="img/tx2.png" title="Confirmed"></img>';}
+            },
+            "targets": 6
+        },
         {"data":"6"},
         {"data":"5"},
         {"data":"7"},
@@ -232,6 +260,10 @@ var table = $('#addrpair').DataTable( {
         "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
         "ajax": jpath+'addrpair.json',
         responsive: true,
+        columnDefs: [
+            { responsivePriority: 1, targets: 2 },
+            { responsivePriority: 2, targets: 3 }
+        ],
         "bRetrieve": true,
         "columns": [{"data":"0"},
         {"data":"1"},
@@ -241,8 +273,8 @@ var table = $('#addrpair').DataTable( {
         ],
         "order": [[ 0, "desc" ]],
         "initComplete": function () {
-            $(table.column( 1 ).nodes() ).addClass( 'lead' );
-            $(table.column( 2 ).nodes() ).addClass( 'lead' );
+            $(table.column( 1 ).nodes() ).addClass( 'led' );
+            $(table.column( 2 ).nodes() ).addClass( 'led' );
         }
     } );
 });

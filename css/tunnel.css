@@ -80,7 +80,7 @@ span.badge.register:hover{
 }
 
 span.exchange{
-  font-size:25px;
+  font-size:24px;
   padding:5px;
 }
 span#ask_price,span#bid_price{
@@ -95,15 +95,24 @@ font-size:17px;
 span.ccy{
 font-style:italic;
 font-weight:normal;
+margin-left: 3px;
 }
 table.dataTable tbody td.HL_Num,table.dataTable tbody td.HL_Price{
 font-size:19px;
 }
-.lead {
+.led {
     font-size: 19px;
+    font-weight:200;
+}
+img.st{
+  width:24px;
+  height:24px;
 }
 .fu {display: inline; }
 .ab {display: none;}
+table.dataTable tbody td.led{
+  text-align: right;
+}
 
 @media screen and (max-width:760px){
   .fixed .content-wrapper,.fixed .right-side{padding-top:50px}
@@ -112,11 +121,13 @@ font-size:19px;
       margin: 8px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 28px;
     margin-top: 10px;
     margin-bottom: 5px;
   }
   img.logos{width: 30px;height: 30px;}
   .fu {display: none; }
   .ab {display: inline;}
+  }
 }
+
