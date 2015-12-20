@@ -170,9 +170,19 @@ $(document).ready(function() {
                 "targets": 3
             },
         {"data":"8"},
+        {
+            "render": function ( data, type, row ) {
+                return '<span title="'+row[4]+'">'+row[4].slice(0,6)+'...'+row[4].slice(28,34)+'</span>';
+            },
+            "targets": 5
+        },
+        {
+            "render": function ( data, type, row ) {
+                return '<span title="'+row[7]+'">'+row[7].slice(0,6)+'...'+row[7].slice(28,34)+'</span>';
+            },
+            "targets": 6
+        },
         {"data":"0"},
-        {"data":"4"},
-        {"data":"7"},
         ],
         "order": [[ 4, "desc" ]],
         "initComplete": function () {
