@@ -18,7 +18,8 @@ div#txschart{
 padding-left:12px;
 padding-top:10px;
 }
-@media (max-width:767px){.fixed .content-wrapper,.fixed .right-side{padding-top:50px}}
+@media (max-width:767px){
+.fixed .content-wrapper,.fixed .right-side{padding-top:50px}}
 img.logoss{width: 25px;
   height: 25px;
 }
