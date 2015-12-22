@@ -60,7 +60,7 @@ function RefreshData() {
         $('#txschart').sparkline(datedata['txs'], {type: 'bar',barColor: '#888',height: '30px',barSpacing:'5px', barWidth: '8px'});
 
         $('#todayvol').html(datedata['volume'][datedata['volume'].length - 1]);
-        var volchange = datedata['volume'][datedata['volume'].length - 1] - datedata['volume'][datedata['volume'].length - 2];
+        var volchange = Math.round((datedata['volume'][datedata['volume'].length - 1] - datedata['volume'][datedata['volume'].length - 2])*100)/100;
         if(volchange > 0){
             $('#volchange').html("+"+volchange);
         }else{
@@ -199,13 +199,6 @@ var table = $('#tabbctx').DataTable( {
         "lengthMenu": [[12, 25, 60, -1], [12, 25, 60, "All"]],
         "ajax": jpath+'bctx.json',
         responsive: true,
-        columnDefs: [
-            { responsivePriority: 1, targets: 0 },
-            { responsivePriority: 2, targets: 1 },
-            { responsivePriority: 3, targets: 2 },
-            { responsivePriority: 4, targets: 3 },
-            { responsivePriority: 5, targets: 5 }
-        ],
         "bRetrieve": true,
         "columns": [
         {

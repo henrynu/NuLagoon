@@ -79,10 +79,6 @@ span.badge.register:hover{
    background-color:#1BC578;
 }
 
-span.exchange{
-  font-size:24px;
-  padding:5px;
-}
 span#ask_price,span#bid_price{
 font-size:15px;
 font-weight:800;
