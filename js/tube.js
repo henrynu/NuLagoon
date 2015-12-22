@@ -35,12 +35,12 @@ function RefreshData() {
 
             $.ajax ({
             type: "GET",
-            url: "//crossorigin.me/https://coinbase.com/api/v1/prices/spot_rate?currency=USD",
+            url: "//crossorigin.me/https://api.bitcoinaverage.com/ticker/global/USD/",
             dataType: "json",
             error: function(data) {
             },
             success: function(data) {
-                price = data['amount'];
+                price = data['last'];
             },
             complete: function(data, status) {
                     $("span#ask_price").html(Math.round(100 * price * (1+spread))/100);
