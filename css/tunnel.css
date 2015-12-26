@@ -107,7 +107,7 @@ img.st{
 .fu {display: inline; }
 .ab {display: none;}
 table.dataTable tbody td.led{
-  text-align: right;
+  text-align: center;
 }
   div.row div.col-sm-12,div.row div.col-sm-10{
   padding-right:5px;

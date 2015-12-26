@@ -18,7 +18,7 @@ jpath = 'https://raw.githubusercontent.com/henrynu/NlgTube/master/data/';
 var urlmd = {"FAQ":"https://raw.githubusercontent.com/henrynu/NlgTube/master/FAQ.md",
 "Guide":"https://raw.githubusercontent.com/henrynu/NuLagoon/master/Fund%20Deposit%20and%20Withdraw%20Guide.md"};
 price = 0;
-spread = 0.001;
+spread = 0.002;
 
 datedata = {};
 function RefreshData() {
@@ -30,9 +30,9 @@ function RefreshData() {
         },
         success: function(dat1) {
         datedata = dat1;
+        price = dat1['price'][0];
         },
         complete: function(data, status) {
-
             $.ajax ({
             type: "GET",
             url: "//crossorigin.me/https://api.bitcoinaverage.com/ticker/global/USD/",
@@ -59,7 +59,7 @@ function RefreshData() {
         $('#pvchart').sparkline(datedata['price'], {composite: true, spotRadius:3, fillColor: false, lineColor: 'red'});
         $('#txschart').sparkline(datedata['txs'], {type: 'bar',barColor: '#888',height: '30px',barSpacing:'5px', barWidth: '8px'});
 
-        $('#todayvol').html(datedata['volume'][datedata['volume'].length - 1]);
+        $('#todayvol').html(Math.round(datedata['volume'][datedata['volume'].length - 1]*100)/100);
         var volchange = Math.round((datedata['volume'][datedata['volume'].length - 1] - datedata['volume'][datedata['volume'].length - 2])*100)/100;
         if(volchange > 0){
             $('#volchange').html("+"+volchange);
