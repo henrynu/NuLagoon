@@ -7,3 +7,8 @@ var urlmd = {"FAQ":"https://raw.githubusercontent.com/henrynu/NuLagoon/master/FA
 "MotionFEE":"https://raw.githubusercontent.com/henrynu/NuLagoon/master/Motion%20capping%20NuLagoon%20Fees.md",
 };
 jpath = 'https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/data/';
+
+window.console = window.console || (function(){
+var c = {}; c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile = c.clear = c.exception = c.trace = c.assert = function(){};
+return c;
+})();

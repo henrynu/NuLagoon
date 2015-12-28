@@ -13,14 +13,58 @@ a.run=function(a){d.each(c,function(d,c){b[c]=h(e[c],g,a)})}}};var l={aqua:[0,25
 0,255,1],gold:[255,215,0,1],green:[0,128,0,1],indigo:[75,0,130,1],khaki:[240,230,140,1],lightblue:[173,216,230,1],lightcyan:[224,255,255,1],lightgreen:[144,238,144,1],lightgrey:[211,211,211,1],lightpink:[255,182,193,1],lightyellow:[255,255,224,1],lime:[0,255,0,1],magenta:[255,0,255,1],maroon:[128,0,0,1],navy:[0,0,128,1],olive:[128,128,0,1],orange:[255,165,0,1],pink:[255,192,203,1],purple:[128,0,128,1],violet:[128,0,128,1],red:[255,0,0,1],silver:[192,192,192,1],white:[255,255,255,1],yellow:[255,255,
 0,1],transparent:[255,255,255,0]}})(jQuery);
 
+/*!
+ * jQuery-ajaxTransport-XDomainRequest - v1.0.4 - 2015-03-05
+ * https://github.com/MoonScript/jQuery-ajaxTransport-XDomainRequest
+ * Copyright (c) 2015 Jason Moon (@JSONMOON)
+ * Licensed MIT (/blob/master/LICENSE.txt)
+ */
+(function(a){if(typeof define==='function'&&define.amd){define(['jquery'],a)}else if(typeof exports==='object'){module.exports=a(require('jquery'))}else{a(jQuery)}}(function($){if($.support.cors||!$.ajaxTransport||!window.XDomainRequest){return $}var n=/^(https?:)?\/\//i;var o=/^get|post$/i;var p=new RegExp('^(\/\/|'+location.protocol+')','i');$.ajaxTransport('* text html xml json',function(j,k,l){if(!j.crossDomain||!j.async||!o.test(j.type)||!n.test(j.url)||!p.test(j.url)){return}var m=null;return{send:function(f,g){var h='';var i=(k.dataType||'').toLowerCase();m=new XDomainRequest();if(/^\d+$/.test(k.timeout)){m.timeout=k.timeout}m.ontimeout=function(){g(500,'timeout')};m.onload=function(){var a='Content-Length: '+m.responseText.length+'\r\nContent-Type: '+m.contentType;var b={code:200,message:'success'};var c={text:m.responseText};try{if(i==='html'||/text\/html/i.test(m.contentType)){c.html=m.responseText}else if(i==='json'||(i!=='text'&&/\/json/i.test(m.contentType))){try{c.json=$.parseJSON(m.responseText)}catch(e){b.code=500;b.message='parseerror'}}else if(i==='xml'||(i!=='text'&&/\/xml/i.test(m.contentType))){var d=new ActiveXObject('Microsoft.XMLDOM');d.async=false;try{d.loadXML(m.responseText)}catch(e){d=undefined}if(!d||!d.documentElement||d.getElementsByTagName('parsererror').length){b.code=500;b.message='parseerror';throw'Invalid XML: '+m.responseText;}c.xml=d}}catch(parseMessage){throw parseMessage;}finally{g(b.code,b.message,c,a)}};m.onprogress=function(){};m.onerror=function(){g(500,'error',{text:m.responseText})};if(k.data){h=($.type(k.data)==='string')?k.data:$.param(k.data)}m.open(j.type,j.url);m.send(h)},abort:function(){if(m){m.abort()}}}});return $}));
+
 //fill DataTable
-jpath = 'https://raw.githubusercontent.com/henrynu/NlgTube/master/data/';
-var urlmd = {"FAQ":"https://raw.githubusercontent.com/henrynu/NlgTube/master/FAQ.md",
-"Guide":"https://raw.githubusercontent.com/henrynu/NuLagoon/master/Fund%20Deposit%20and%20Withdraw%20Guide.md"};
+jpath = '//crossorigin.me/https://raw.githubusercontent.com/henrynu/NlgTube/master/data/';
+var urlmd = {"FAQ":"//crossorigin.me/https://raw.githubusercontent.com/henrynu/NlgTube/master/FAQ.md",
+"Guide":"//crossorigin.me/https://raw.githubusercontent.com/henrynu/NuLagoon/master/Fund%20Deposit%20and%20Withdraw%20Guide.md"};
 price = 0;
 spread = 0.002;
-
 datedata = {};
+
+function genmagic(){
+    do{
+        var magic = 1532;
+        var n = Math.round((Math.random()+0.1) * 900)/1000;
+        var a = n * magic;
+        var b = parseInt(String(a).replace('.','').slice(-5,-1)) * magic;
+        /*console.log(b)*/
+        var c = parseInt(String(b).replace('.','').slice(3,6))/100000.0
+    }
+    while (isNaN(c) || c < 0.001);
+    /*console.log(c)*/
+    $("#magic_n").html(String(n));
+    $("#magic_b").html(String(c));
+};
+genmagic();//gen magic number for register
+$(function () {
+    $( "span.register" ).click(function() {
+        $("a#guidetab").click();
+        $(".blink").animate({backgroundColor:'lightgreen'},800,"linear",function(){
+            $(this).animate({backgroundColor:'white'},600);
+            $(".blink").animate({backgroundColor:'lightgreen'},800,"linear",function(){
+            $(this).animate({backgroundColor:'white'},600);
+            });
+        });
+        $("#magic_n,#magic_b").animate({color:'orange'},600,"linear",function(){
+            $(this).animate({color:'black'},800);
+            $("#magic_n,#magic_b").animate({color:'orange'},600,"linear",function(){
+                $(this).animate({color:'black'},800);
+            });
+        });
+    });
+    $("a.toliveap").click(function(){
+        $("a#liveap").click();
+    });
+
+});
 function RefreshData() {
     $.ajax ({
         type: "GET",
@@ -102,44 +146,6 @@ $.ajax({
     }
 });
 
-
-function genmagic(){
-    do{
-        var magic = 1532;
-        var n = Math.round((Math.random()+0.1) * 900)/1000;
-        var a = n * magic;
-        var b = parseInt(String(a).replace('.','').slice(-5,-1)) * magic;
-        /*console.log(b)*/
-        var c = parseInt(String(b).replace('.','').slice(3,6))/100000.0
-    }
-    while (isNaN(c) || c < 0.001);
-    /*console.log(c)*/
-    $("#magic_n").html(String(n));
-    $("#magic_b").html(String(c));
-};
-genmagic();//gen magic number for register
-$(function () {
-    $( "span.register" ).click(function() {
-        $("a#guidetab").click();
-        $(".blink").animate({backgroundColor:'lightgreen'},800,"linear",function(){
-            $(this).animate({backgroundColor:'white'},600);
-            $(".blink").animate({backgroundColor:'lightgreen'},800,"linear",function(){
-            $(this).animate({backgroundColor:'white'},600);
-            });
-        });
-        $("#magic_n,#magic_b").animate({color:'orange'},600,"linear",function(){
-            $(this).animate({color:'black'},800);
-            $("#magic_n,#magic_b").animate({color:'orange'},600,"linear",function(){
-                $(this).animate({color:'black'},800);
-            });
-        });
-    });
-    $("a.toliveap").click(function(){
-        $("a#liveap").click();
-    });
-
-});
-
 $(document).ready(function() {
     var table = $('#tubetx').DataTable( {
         "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
@@ -182,7 +188,7 @@ $(document).ready(function() {
             },
             "targets": 6
         },
-        {"data":"0"},
+        {"data":"0"}
         ],
         "order": [[ 6, "desc" ]],
         "initComplete": function () {
@@ -199,6 +205,7 @@ var table = $('#tabbctx').DataTable( {
         "lengthMenu": [[12, 25, 60, -1], [12, 25, 60, "All"]],
         "ajax": jpath+'bctx.json',
         responsive: true,
+        cache: false,
         "bRetrieve": true,
         "columns": [
         {
@@ -255,7 +262,7 @@ var table = $('#tabbctx').DataTable( {
                     return '<a target="_blank" href="'+url+'">View It On Blockexplorer</a>';
                 },
                 "targets": 10
-            },
+            }
         ],
         "order": [[ 0, "desc" ]],
         "initComplete": function () {
@@ -268,6 +275,7 @@ var table = $('#addrpair').DataTable( {
         "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
         "ajax": jpath+'addrpair.json',
         responsive: true,
+        cache: false,
         "bRetrieve": true,
         "columns": [
             {
@@ -284,7 +292,7 @@ var table = $('#addrpair').DataTable( {
         },
         {"data":"3"},
         {"data":"4"},
-        {"data":"0"},
+        {"data":"0"}
         ],
         "order": [[ 4, "desc" ]],
         "initComplete": function () {
