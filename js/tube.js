@@ -216,7 +216,7 @@ var table = $('#tabbctx').DataTable( {
         "columns": [
         {
                 "render": function ( data, type, row ) {
-                    return '<span class="ab">'+row[0].slice(8,16)+'</span><span class="fu">'+row[0]+'</span>';
+                    return '<span class="fu">'+row[0]+'</span><span class="ab">'+row[0].slice(8,16)+'</span>';
                 },
                 "targets": 0
             },
