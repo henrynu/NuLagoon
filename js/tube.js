@@ -224,8 +224,8 @@ var table = $('#tabbctx').DataTable( {
                 "render": function ( data, type, row ) {
                     if(row[1]=='TubeIn' || row[1]=='CashDeposit'){return '<span class="text-green"><i class="fa fa-sign-in fa-rotate-90"></i> <span class="fu">'+row[1]+'</span></span>';}
                     else if(row[1].search('Refund')>=0){return '<span class="text-yellow" ><i class="fa fa-fw fa-undo"></i><span class="fu">'+row[1]+'</span></span>';}
-                    else if(row[1].search('Invalid')>=0){return '<span class="text-yellow" ><i class="fa fa-fw fa-warning"></i><span class="fu">'+row[1]+'</span></span>';}
-                    else if(row[1]=='TubeOut' || row[1]=='CashWithdraw'){return '<span class="text-red"><i class="fa fa-sign-out fa-rotate-270 "></i> <span class="fu">'+row[1]+'</span></span>';}
+                    else if(row[1].search('Invalid')>=0 || row[1]=='Failed'){return '<span class="text-red" ><i class="fa fa-fw fa-warning"></i><span class="fu">'+row[1]+'</span></span>';}
+                    else if(row[1]=='TubeOut' || row[1]=='CashWithdraw'){return '<span class="text-green"><i class="fa fa-sign-out fa-rotate-270 "></i> <span class="fu">'+row[1]+'</span></span>';}
                     else if(row[1]=='RegisterReq'){return '<span class="text-blue"><i class="fa fa-link"></i> <span class="fu">'+row[1]+'</span></span>';}
                     else {return row[1];}
                 },
