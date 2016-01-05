@@ -38,7 +38,7 @@ if( $("html").hasClass("IE89") ) {
 function genmagic(){
     do{
         var magic = 1532;
-        var n = Math.round((Math.random()+0.1) * 900)/1000;
+        var n = Math.round((Math.random() * 0.899 + 0.101) * 1000)/1000;
         var a = n * magic;
         var b = parseInt(String(a).replace('.','').slice(-5,-1)) * magic;
         /*console.log(b)*/
