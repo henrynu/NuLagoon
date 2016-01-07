@@ -26,8 +26,10 @@ jpath = '//crossorigin.me/https://bitbucket.org/henry_nu/data/downloads/';
 urlmd = {"FAQ":"https://raw.githubusercontent.com/henrynu/NlgTube/master/FAQ.md",
 "Guide":"https://raw.githubusercontent.com/henrynu/NuLagoon/master/Fund%20Deposit%20and%20Withdraw%20Guide.md"};
 price = 0;
+vol24 = [];
 spread = 0.002;
 datedata = {};
+tubetx = [];
 
 if( $("html").hasClass("IE89") ) {
  urlmd['FAQ'] = '//crossorigin.me/'+urlmd['FAQ'];
@@ -73,23 +75,24 @@ $(function () {
 function RefreshData() {
     $.ajax ({
         type: "GET",
-        url: jpath+'datedata.json',
+        url: jpath+'datetu.json',
         dataType: "json",
         error: function(data) {
         },
         success: function(dat1) {
         datedata = dat1;
-        price = dat1['price'][0];
+        tubetx = dat1['data'];
         },
         complete: function(data, status) {
             $.ajax ({
             type: "GET",
-            url: "//crossorigin.me/https://api.bitcoinaverage.com/ticker/global/USD/",
+            url: jpath+'rd.json',
             dataType: "json",
             error: function(data) {
             },
             success: function(data) {
-                price = data['last'];
+                price = data['price'];
+                vol24 = data['24vol'];
             },
             complete: function(data, status) {
                     $("span#ask_price").html(Math.round(100 * price * (1+spread))/100);
@@ -101,60 +104,22 @@ function RefreshData() {
                     BTCpercent = 100 - NBTpercent;
                     $("#NBTPercent").css('width', NBTpercent+'%').attr('aria-valuenow', NBTpercent);
                     $("#BTCPercent").css('width', BTCpercent+'%').attr('aria-valuenow', BTCpercent);
+                    $('#todayvol').html(Math.round(vol24[0]*100)/100);
+                    var volchange = Math.round((vol24[0] - vol24[1])*100)/100;
+                    if(volchange > 0){
+                        $('#volchange').html("+"+volchange);
+                    }else{
+                        $('#volchange').html(volchange);
+                    }
             }
         });
-
         $('#pvchart').sparkline(datedata['volume'], {type: 'bar',barColor: '#00a65a',height: '55px', barWidth: '12px'});
         $('#pvchart').sparkline(datedata['price'], {composite: true, spotRadius:3, fillColor: false, lineColor: 'red'});
         $('#txschart').sparkline(datedata['txs'], {type: 'bar',barColor: '#888',height: '30px',barSpacing:'5px', barWidth: '8px'});
 
-        $('#todayvol').html(Math.round(datedata['volume'][datedata['volume'].length - 1]*100)/100);
-        var volchange = Math.round((datedata['volume'][datedata['volume'].length - 1] - datedata['volume'][datedata['volume'].length - 2])*100)/100;
-        if(volchange > 0){
-            $('#volchange').html("+"+volchange);
-        }else{
-            $('#volchange').html(volchange);
-        }
-    }
-    });
-};
-RefreshData();
-setTimeout(RefreshData, 2*60*1000);
-
-$(function () {
-  $("a.anchor").click(function () {
-    var $this = $(this);
-    var target = $this.attr("href");
-    if (typeof target === 'string') {
-      $("body").animate({
-        scrollTop: ($(target).offset().top - 60 ) + "px"
-      }, 500);
-    }
-  });
-});
-
-$.ajax({
-    url:urlmd['FAQ'],
-    dataType:"text",
-    success:function(text){
-        var converter = new showdown.Converter();
-        $("#FAQ").find(".md").html(converter.makeHtml(text));
-    }
-});
-
-$.ajax({
-    url:urlmd['Guide'],
-    dataType:"text",
-    success:function(text){
-        var converter = new showdown.Converter();
-        $("#Guide").find(".md").html(converter.makeHtml(text));
-    }
-});
-
-$(document).ready(function() {
-    var table = $('#tubetx').DataTable( {
+        var table = $('#tubetx').DataTable( {
         "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
-        "ajax": jpath+'tubetx.json',
+        data: tubetx,
         responsive: true,
         "bRetrieve": true,
         "columns": [
@@ -198,17 +163,52 @@ $(document).ready(function() {
         "order": [[ 6, "desc" ]],
         "initComplete": function () {
             $('.dataTables_length,.dataTables_filter').addClass( 'fu' );
-            $(table.column( 0 ).nodes() ).addClass( 'led' );
-            $(table.column( 2 ).nodes() ).addClass( 'led' );
-            $(table.column( 3 ).nodes() ).addClass( 'led' );
         }
     } );
 
+    }
+    });
+};
+
+
+$(function () {
+  $("a.anchor").click(function () {
+    var $this = $(this);
+    var target = $this.attr("href");
+    if (typeof target === 'string') {
+      $("body").animate({
+        scrollTop: ($(target).offset().top - 60 ) + "px"
+      }, 500);
+    }
+  });
+});
+
+$.ajax({
+    url:urlmd['FAQ'],
+    dataType:"text",
+    success:function(text){
+        var converter = new showdown.Converter();
+        $("#FAQ").find(".md").html(converter.makeHtml(text));
+    }
+});
+
+$.ajax({
+    url:urlmd['Guide'],
+    dataType:"text",
+    success:function(text){
+        var converter = new showdown.Converter();
+        $("#Guide").find(".md").html(converter.makeHtml(text));
+    }
+});
+
+$(document).ready(function() {
+    RefreshData();
+    setTimeout(RefreshData, 2*60*1000);
 } );
 $("#libctx").click(function(){
 var table = $('#tabbctx').DataTable( {
         "lengthMenu": [[12, 25, 60, -1], [12, 25, 60, "All"]],
-        "ajax": jpath+'bctx.json',
+        "ajax": jpath+'bcpair.json',
         responsive: true,
         cache: false,
         "bRetrieve": true,
@@ -278,7 +278,10 @@ var table = $('#tabbctx').DataTable( {
 $("#liveap").click(function(){
 var table = $('#addrpair').DataTable( {
         "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
-        "ajax": jpath+'addrpair.json',
+        "ajax": {
+            "url": jpath+'bcpair.json',
+            "dataSrc": "pair"
+        },
         responsive: true,
         cache: false,
         "bRetrieve": true,
