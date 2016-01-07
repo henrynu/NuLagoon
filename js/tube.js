@@ -93,6 +93,7 @@ function RefreshData() {
             success: function(data) {
                 price = data['price'];
                 vol24 = data['24vol'];
+                datedata['bal'] = data['bal'];
             },
             complete: function(data, status) {
                     $("span#ask_price").html(Math.round(100 * price * (1+spread))/100);
