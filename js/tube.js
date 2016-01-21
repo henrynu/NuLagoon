@@ -25,9 +25,7 @@ a.run=function(a){d.each(c,function(d,c){b[c]=h(e[c],g,a)})}}};var l={aqua:[0,25
 jpath = '//crossorigin.me/https://bitbucket.org/henry_nu/data/downloads/';
 urlmd = {"FAQ":"https://raw.githubusercontent.com/henrynu/NlgTube/master/FAQ.md",
 "Guide":"https://raw.githubusercontent.com/henrynu/NuLagoon/master/Fund%20Deposit%20and%20Withdraw%20Guide.md"};
-price = 0;
-vol24 = [];
-spread = 0.002;
+rd = {};
 datedata = {};
 tubetx = [];
 
@@ -91,16 +89,16 @@ function RefreshData() {
             error: function(data) {
             },
             success: function(data) {
-                price = data['price'];
-                vol24 = data['24vol'];
+                rd = data;
             },
             complete: function(data, status) {
-                    $("span#ask_price").html(Math.round(100 * price * (1+spread))/100);
-                    $("span#bid_price").html(Math.round(100 * price * (1-spread))/100);
+                    vol24 = rd['24vol'];
+                    $("span#ask_price").html(Math.round(100 * rd['ask'])/100);
+                    $("span#bid_price").html(Math.round(100 * rd['bid'])/100);
 
                     $("span#bal_nbt").html(datedata['bal']['NBT']);
                     $("span#bal_btc").html(datedata['bal']['BTC']);
-                    NBTpercent =  100 * datedata['bal']['NBT'] / (datedata['bal']['NBT'] + datedata['bal']['BTC']*price);
+                    NBTpercent =  100 * datedata['bal']['NBT'] / (datedata['bal']['NBT'] + datedata['bal']['BTC']*rd['price']);
                     BTCpercent = 100 - NBTpercent;
                     $("#NBTPercent").css('width', NBTpercent+'%').attr('aria-valuenow', NBTpercent);
                     $("#BTCPercent").css('width', BTCpercent+'%').attr('aria-valuenow', BTCpercent);
