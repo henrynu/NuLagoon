@@ -1,2 +1,1 @@
 TXDateTime,EffectDate,Type,Pool,CCY,Amount,UserAddr,PoolAddr,BlockHeight,TXHash,Status
-2016-02-16T05:34:39Z,2016-02-18,Deposit,A,BTC,7,1P7q4oHdj1SpCfdhS29EaZm68DCmXmL696,1PwUThmFLvUHp4WYoeDL15GggrHkD3Capw,398659,ee4869f30005aef186052c0976ce16ad8b00a210b0f327ad8b335c20dc9b2677,Confirmed
