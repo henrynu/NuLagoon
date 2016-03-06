@@ -24,6 +24,14 @@ img.logos{
   height: 45px;
   margin:-8px 5px 0px 5px;
 }
+img.tlogo{
+  position: fixed;
+  left:10px;
+  top:6px;
+  width: 90px;
+  height: 90px;
+  z-index:200;
+}
 
 img.qrcode{width: 128px;
   height: 128px;
@@ -127,6 +135,11 @@ table.dataTable tbody td.led{
   img.logos{width: 30px;height: 30px;}
   .fu {display: none; }
   .ab {display: inline;}
+  img.tlogo{
+    top:3px;
+    width:45px;
+    height:45px;
+  }
   }
 
 }
