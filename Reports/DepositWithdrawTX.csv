@@ -1,1 +1,3 @@
 TXDateTime,EffectDate,Type,Pool,CCY,Amount,UserAddr,PoolAddr,BlockHeight,TXHash,Status
+2016-03-31T14:35:57Z,2016-04-04,Grant,A,NBT,1179.935,Coinbase,BLYdibXLb7ixXgKW5bFVD4KiCRLkyk6Ks6,810778,353befbd0bb94830fdcf979008ab495c202f3b0ebcd18d7dd7c9b67cc44edebc,Confirmed
+2016-03-31T14:35:57Z,2016-04-04,Grant,D,NBT,3580.065,Coinbase,BLYdibXLb7ixXgKW5bFVD4KiCRLkyk6Ks6,810778,353befbd0bb94830fdcf979008ab495c202f3b0ebcd18d7dd7c9b67cc44edebc,Confirmed
