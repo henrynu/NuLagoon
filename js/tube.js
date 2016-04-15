@@ -55,16 +55,8 @@ $(function () {
         $("a#guidetab").click();
         $(".blink").animate({backgroundColor:'lightgreen'},800,"linear",function(){
             $(this).animate({backgroundColor:'white'},600);
-            $(".blink").animate({backgroundColor:'lightgreen'},800,"linear",function(){
-            $(this).animate({backgroundColor:'white'},600);
-            });
         });
-        $("#magic_n,#magic_b").animate({color:'orange'},600,"linear",function(){
-            $(this).animate({color:'black'},800);
-            $("#magic_n,#magic_b").animate({color:'orange'},600,"linear",function(){
-                $(this).animate({color:'black'},800);
-            });
-        });
+
     });
     $("a.toliveap").click(function(){
         $("a#liveap").click();
