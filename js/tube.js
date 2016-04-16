@@ -109,7 +109,7 @@ function RefreshData() {
         $('#txschart').sparkline(datedata['txs'], {type: 'bar',barColor: '#888',height: '30px',barSpacing:'5px', barWidth: '8px'});
 
         var table = $('#tubetx').DataTable( {
-        "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
+        "lengthMenu": [[12, 25, 60, -1], [12, 25, 60, "All"]],
         data: tubetx,
         responsive: true,
         "bRetrieve": true,
@@ -268,7 +268,7 @@ var table = $('#tabbctx').DataTable( {
 });
 $("#liveap").click(function(){
 var table = $('#addrpair').DataTable( {
-        "lengthMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
+        "lengthMenu": [[12, 25, 60, -1], [12, 25, 60, "All"]],
         "ajax": {
             "url": jpath+'bcpair.json',
             "dataSrc": "pair"
