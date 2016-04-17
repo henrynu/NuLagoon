@@ -117,7 +117,7 @@ function RefreshData() {
         {
                 "render": function ( data, type, row ) {
                     if(row[2]=='BTC'){return row[3]+' <span class="badge bg-yellow ccy" title="Bitcoin">B</span>';}
-                    else if(row[2]=='NBT'){return row[3]+' <span class="badge bg-black ccy" title="Nubits">N</span>';}
+                    else if(row[2]=='NBT'){return row[3]+' <span class="badge bg-black ccy" title="US-Nubits">N</span>';}
                 },
                 "targets": 1
             },
@@ -132,7 +132,7 @@ function RefreshData() {
         {
                 "render": function ( data, type, row ) {
                     if(row[5]=='BTC'){return row[6]+' <span class="badge bg-yellow ccy" title="Bitcoin">B</span>';}
-                    else if(row[5]=='NBT'){return row[6]+' <span class="badge bg-black ccy" title="Nubits">N</span>';}
+                    else if(row[5]=='NBT'){return row[6]+' <span class="badge bg-black ccy" title="US-Nubits">N</span>';}
                 },
                 "targets": 3
             },
