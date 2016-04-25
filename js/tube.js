@@ -86,8 +86,10 @@ function RefreshData() {
             },
             complete: function(data, status) {
                     vol24 = rd['24vol'];
-                    $("span#ask_price").html(Math.round(100 * rd['ask'])/100);
-                    $("span#bid_price").html(Math.round(100 * rd['bid'])/100);
+                    $("span#ask_price").html('<i class="fa fa-usd"></i>'+Math.round(100 * rd['ask'])/100);
+                    $("span#bid_price").html('<i class="fa fa-usd"></i>'+Math.round(100 * rd['bid'])/100);
+                    $("span#ask_pricer").html('<i class="fa fa-btc"></i>'+Math.round(100000000 / rd['ask'])/100000000);
+                    $("span#bid_pricer").html('<i class="fa fa-btc"></i>'+Math.round(100000000 / rd['bid'])/100000000);
 
                     $("span#bal_nbt").html(datedata['bal']['NBT']);
                     $("span#bal_btc").html(datedata['bal']['BTC']);

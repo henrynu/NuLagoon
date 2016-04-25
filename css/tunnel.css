@@ -92,6 +92,11 @@ font-size:15px;
 font-weight:800;
 padding:10px;
 }
+span#ask_pricer,span#bid_pricer{
+font-size:15px;
+font-weight:400;
+padding:10px;
+}
 span#magic_n,span#magic_b{
 font-weight:800;
 font-size:17px;
