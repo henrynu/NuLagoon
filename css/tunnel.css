@@ -90,12 +90,12 @@ span.badge.register:hover{
 span#ask_price,span#bid_price{
 font-size:15px;
 font-weight:800;
-padding:10px;
+padding:9px;
 }
 span#ask_pricer,span#bid_pricer{
 font-size:15px;
 font-weight:400;
-padding:10px;
+padding:8px;
 }
 span#magic_n,span#magic_b{
 font-weight:800;
