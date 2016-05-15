@@ -88,11 +88,13 @@ function RefreshData() {
                     vol24 = rd['24vol'];
                     $("span#ask_price").html('<i class="fa fa-usd"></i>'+Math.round(100 * rd['ask'])/100);
                     $("span#bid_price").html('<i class="fa fa-usd"></i>'+Math.round(100 * rd['bid'])/100);
-                    $("span#ask_pricer").html('<i class="fa fa-btc"></i>'+Math.round(100000000 / rd['ask'])/100000000);
-                    $("span#bid_pricer").html('<i class="fa fa-btc"></i>'+Math.round(100000000 / rd['bid'])/100000000);
+                    $("span#ask_pricer").html('<i class="fa fa-btc"></i>'+Math.round(10000000 / rd['ask'])/10000000);
+                    $("span#bid_pricer").html('<i class="fa fa-btc"></i>'+Math.round(10000000 / rd['bid'])/10000000);
 
                     $("span#bal_nbt").html(datedata['bal']['NBT']);
                     $("span#bal_btc").html(datedata['bal']['BTC']);
+                    //$("#NBTPercent").attr('title', 'Price: '+String(rd['price'])+'\nSpread: '+String(Math.round(10000*(1-rd['bid']/rd['price']))/100)+'%');
+                    $("#BTCPercent").attr('title', 'Price: '+String(rd['price'])+'\nSpread: '+String(Math.round(10000*(rd['ask']/rd['price']-1))/100)+'%\nUpdated: '+String(Math.round((Date.now()/1000-rd['dt'])/60))+'m ago');
                     NBTpercent =  100 * datedata['bal']['NBT'] / (datedata['bal']['NBT'] + datedata['bal']['BTC']*rd['price']);
                     BTCpercent = 100 - NBTpercent;
                     $("#NBTPercent").css('width', NBTpercent+'%').attr('aria-valuenow', NBTpercent);
