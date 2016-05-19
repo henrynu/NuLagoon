@@ -21,11 +21,9 @@ NuLagoon recommends [Electrum ](https://electrum.org/#download) and [Nu client](
 
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide3.JPG" width="690" height="213"> 
 
-<img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide4.JPG" width="690" height="364"> 
+<img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide4.JPG" width="690" height="423"> 
 
  - **Step3: Custom change address & send transaction**
-
-For Nubits:
 
 <img src="https://raw.githubusercontent.com/henrynu/NuLagoon/master/res/guide5.JPG" width="690" height="468">
 
