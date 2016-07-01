@@ -1,3 +1,1 @@
 TXDateTime,EffectDate,Type,Pool,CCY,Amount,UserAddr,PoolAddr,BlockHeight,TXHash,Status
-2016-06-10T01:26:48Z,2016-06-13,Convert,A,NBT,0.1,B67naNN2JPSC5xfynfmK6GfBaUriQHfgcy,BGNbLajr7tSD5LEqYmG2hztzciPhmjf4eX,912214,c03ddc3bd42309a2c4afcc3134e10780c01957b9142213b6b6f9a8c5ae16d5dc,Confirmed
-2016-06-10T01:20:07Z,2016-06-13,Convert,D,BTC,0.001,186PzRYUwWu2jrhcT1i4nf9XDxq7ATRNPF,19eGo6grxSqXSQqugw3N7NxKopggWzEyec,415599,b24a0d839bb6056fc49e686abea350c8c28d6296dffb81a20623a8b1dfdfa860,Confirmed
