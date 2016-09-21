@@ -129,7 +129,7 @@ function RefreshData() {
                 "render": function ( data, type, row ) {
                     if(row[1]=='RegisterReq'){return '<span class="text-blue""><i class="fa fa-fw fa-link"></i><span class="fu">Register</span></span>';}
                     else if(row[1]=='TubeOut'){return '<span class="text-green"><i class="fa fa-fw fa-arrow-right"></i><span class="fu">Exchange</span></span';}
-                    else if(row[1].search('Refund')>=0){return '<span class="text-yellow" ><i class="fa fa-fw fa-undo"></i><span class="fu">Refund</span></span>';}
+                    else if(row[1].search('Refund')>=0 || row[1].search('Withdraw')>=0){return '<span class="text-yellow" ><i class="fa fa-fw fa-undo"></i><span class="fu">'+row[1]+'</span></span>';}
                 },
                 "targets": 2
             },
@@ -217,7 +217,7 @@ var table = $('#tabbctx').DataTable( {
         {
                 "render": function ( data, type, row ) {
                     if(row[1]=='TubeIn' || row[1]=='CashDeposit'){return '<span class="text-green"><i class="fa fa-sign-in fa-rotate-90"></i> <span class="fu">'+row[1]+'</span></span>';}
-                    else if(row[1].search('Refund')>=0){return '<span class="text-yellow" ><i class="fa fa-fw fa-undo"></i><span class="fu">'+row[1]+'</span></span>';}
+                    else if(row[1].search('Refund')>=0 || row[1].search('WithdrawOrder')>=0){return '<span class="text-yellow" ><i class="fa fa-fw fa-undo"></i><span class="fu">'+row[1]+'</span></span>';}
                     else if(row[1].search('Invalid')>=0 || row[1]=='Failed'|| row[1]=='UnRegistered'){return '<span class="text-red" ><i class="fa fa-fw fa-warning"></i><span class="fu">'+row[1]+'</span></span>';}
                     else if(row[1]=='TubeOut' || row[1]=='CashWithdraw'){return '<span class="text-green"><i class="fa fa-sign-out fa-rotate-270 "></i> <span class="fu">'+row[1]+'</span></span>';}
                     else if(row[1]=='RegisterReq'){return '<span class="text-blue"><i class="fa fa-link"></i> <span class="fu">'+row[1]+'</span></span>';}
@@ -245,6 +245,7 @@ var table = $('#tabbctx').DataTable( {
             "render": function ( data, type, row ) {
                 if(row[9]=='Pen'){return '<img class="st" src="img/tx0.png" title="Pending"></img>';}
                 else if(row[9]=='Con'){return '<img class="st" src="img/tx2.png" title="Confirmed"></img>';}
+                else {return row[9]}
             },
             "targets": 6
         },
