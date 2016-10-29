@@ -143,13 +143,13 @@ function RefreshData() {
         {"data":"8"},
         {
             "render": function ( data, type, row ) {
-                return '<span title="'+row[4]+'">'+row[4].slice(0,6)+'...'+row[4].slice(28,34)+'</span>';
+                return '<span title="'+row[4]+'">'+row[4].slice(0,5)+'..'+row[4].slice(29,34)+'</span>';
             },
             "targets": 5
         },
         {
             "render": function ( data, type, row ) {
-                return '<span title="'+row[7]+'">'+row[7].slice(0,6)+'...'+row[7].slice(28,34)+'</span>';
+                return '<span title="'+row[7]+'">'+row[7].slice(0,5)+'..'+row[7].slice(29,34)+'</span>';
             },
             "targets": 6
         },
@@ -284,13 +284,13 @@ var table = $('#addrpair').DataTable( {
         "columns": [
             {
             "render": function ( data, type, row ) {
-                return '<span class="ab">'+row[1].slice(0,6)+'...'+row[1].slice(28,34)+'</span><span class="led fu">'+row[1]+'</span>';
+                return '<span class="ab">'+row[1].slice(0,5)+'..'+row[1].slice(29,34)+'</span><span class="led fu">'+row[1]+'</span>';
             },
             "targets": 1
         },
                 {
             "render": function ( data, type, row ) {
-                return '<span class="ab">'+row[2].slice(0,6)+'...'+row[2].slice(28,34)+'</span><span class="led fu">'+row[2]+'</span>';
+                return '<span class="ab">'+row[2].slice(0,5)+'..'+row[2].slice(29,34)+'</span><span class="led fu">'+row[2]+'</span>';
             },
             "targets": 2
         },
