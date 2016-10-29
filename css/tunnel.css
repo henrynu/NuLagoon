@@ -145,6 +145,9 @@ table.dataTable tbody td.led{
     width:45px;
     height:45px;
   }
+  table.dataTable tbody td {
+    padding: 8px 6px;
+    }
   }
 
 }

@@ -126,6 +126,7 @@ function RefreshData() {
                 "targets": 1
             },
         {
+                "orderable": false,
                 "render": function ( data, type, row ) {
                     if(row[1]=='RegisterReq'){return '<span class="text-blue""><i class="fa fa-fw fa-link"></i><span class="fu">Register</span></span>';}
                     else if(row[1]=='TubeOut'){return '<span class="text-green"><i class="fa fa-fw fa-arrow-right"></i><span class="fu">Exchange</span></span';}
