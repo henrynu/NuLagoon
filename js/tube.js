@@ -94,7 +94,7 @@ function RefreshData() {
                     $("span#bal_nbt").html(datedata['bal']['NBT']);
                     $("span#bal_btc").html(datedata['bal']['BTC']);
                     //$("#NBTPercent").attr('title', 'Price: '+String(rd['price'])+'\nSpread: '+String(Math.round(10000*(1-rd['bid']/rd['price']))/100)+'%');
-                    $("#BTCPercent").attr('title', 'Price: '+String(rd['price'])+'\nSpread: '+String(Math.round(10000*(rd['ask']/rd['price']-1))/100)+'%\nUpdated: '+String(Math.round((Date.now()/1000-rd['dt'])/60))+'m ago');
+                    $("#BTCPercent").attr('title', 'Price: '+String(rd['price'])+'\nSpread: '+String(Math.round(10000*(rd['ask']/rd['price']-1))/50)+'%\nUpdated: '+String(Math.round((Date.now()/1000-rd['dt'])/60))+'m ago');
                     NBTpercent =  100 * datedata['bal']['NBT'] / (datedata['bal']['NBT'] + datedata['bal']['BTC']*rd['price']);
                     BTCpercent = 100 - NBTpercent;
                     $("#NBTPercent").css('width', NBTpercent+'%').attr('aria-valuenow', NBTpercent);
