@@ -42,6 +42,8 @@ function formatter(value){
         return '<span class="glyphicon glyphicon-arrow-down text-danger"></span>';
     }else if(value=="Buy"){
         return '<span class="glyphicon glyphicon-arrow-up text-success"></span>';
+    }else{
+        return value;
     }
 
 }
@@ -169,7 +171,7 @@ function DrawPage(rawData) {
             {
                 type: 'inside',
                 xAxisIndex: [0, 1],
-                start: 98,
+                start: 50,
                 end: 100
             },
             {
@@ -177,7 +179,7 @@ function DrawPage(rawData) {
                 xAxisIndex: [0, 1],
                 type: 'slider',
                 top: '90%',
-                start: 98,
+                start: 50,
                 end: 100
             }
         ],
