@@ -50,6 +50,15 @@ function formatter(value){
 function round2(value){
     return Math.round(100*value)/100;
 }
+function obbsfmt(value){
+    if(value=='Buy'){
+        return '<small class="text-success">'+value+'</small>';
+    }else{
+        return '<small class="text-danger">'+value+'</small>';
+    }
+
+}
+
 function mynum(value){
     mn = String(value).split('.')
     if (mn.length==2){

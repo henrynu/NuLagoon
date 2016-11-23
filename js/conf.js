@@ -4,6 +4,7 @@ var TXURL={"mBTC":"https://blockchain.info/tx/","BKS":"http://bcblockexplorer.co
 var ORDERAMT ={"mBTC":"0.1","BKS":"10"};
 
 var OBTBLCOL = [
+  {"name":"b_s","title":"","formatter":'obbsfmt'},
   {"name":"price","title":"Price","type":"number","style":{"width":90,"maxWidth":90}},
   {"name":"amount1","title":"Amount1","type":"number","style":{"width":100,"maxWidth":100},"formatter":"mynum"},
   {"name":"amount2","title":"Amount2","type":"number","style":{"width":100,"maxWidth":100},"formatter":"mynum"},
@@ -37,7 +38,7 @@ var MYTDCOL = [
   {"name":"price","title":"Price","type":"number"},
   {"name":"amount1","title":CCY1,"type":"number","formatter":"mynum"},
   {"name":"amount2","title":CCY2,"type":"number","formatter":"mynum"},
-  {"name":"b_s","title":"B/S"},
+  {"name":"b_s","title":"B/S","formatter":"b_sfmt"},
 ];
 var MYBCTCOL = [
   {"name":"time","title":"Time",type: "date", formatString: "MM-DD HH:mm","style":{"width":130,"maxWidth":130}},
