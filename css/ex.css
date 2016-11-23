@@ -1,0 +1,14 @@
+table.table-condensed{
+    margin-bottom: 0px;
+}
+#obhr{
+    border-color: black;
+    margin: 0px;
+    border-width: 2px;
+}
+nav.navbar-nlg{
+    margin-bottom: 0px;
+}
+#sorderbook td,#borderbook td,#motable td,#mbctable td,#thtable td{
+    padding: 1px 2px;
+}
