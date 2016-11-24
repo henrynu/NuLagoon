@@ -315,11 +315,11 @@ function UpdatePubdata(ccy1,ccy2){
             obs_ft.rows.load(ob_sell);
             $('#sotable tr').click(function() {
                 $('.nav a[href="#trade"]').tab('show');
-                $("#oprice").val($(this.children[0]).html());
+                $("#oprice").val($(this.children[1]).html());
             });
             $('#botable tr').click(function() {
                 $('.nav a[href="#trade"]').tab('show');
-                $("#oprice").val($(this.children[0]).html());
+                $("#oprice").val($(this.children[1]).html());
             });
             DrawPage(data['OCLH']);
         }
