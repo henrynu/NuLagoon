@@ -257,6 +257,11 @@ function DrawPage(rawData) {
             }
         ]
     }, true);
+    setTimeout(function (){
+        window.onresize = function () {
+            myChart.resize();
+        }
+    },200);
 }
 
 var noqrcode = new QRCode(document.getElementById("noqrcode"), {
