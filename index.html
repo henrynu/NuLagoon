@@ -67,49 +67,49 @@
         <div id="mainchart" class="collapse in" style="height:360px;"></div>
         <div class="row well well-sm" style="background-color: white;">
 
-        <div class="col-md-2 pull-right">
-        <ul class="nav nav-stacked">
+        <div class="col-xs-12 col-sm-2 pull-right">
+        <ul class="nav nav-pills">
           <li class="active"><a data-toggle="tab" href="#trade">Trade</a></li>
-          <li><a data-toggle="tab" href="#myorders">My Orders</a></li>
-          <li><a data-toggle="tab" href="#mytrades">My Trades</a></li>
+          <li><a data-toggle="tab" href="#myorders">MyOrders</a></li>
+          <li><a data-toggle="tab" href="#mytrades">MyTrades</a></li>
           <li><a data-toggle="tab" href="#mybctxs">My TXs</a></li>
           <li><a data-toggle="tab" href="#addrset">Setting</a></li>
         </ul>
         </div>
-
-        <div class="col-md-10">
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-12 col-sm-10">
         <div class="tab-content">
           <div id="trade" class="tab-pane fade in active">
 
             <form class="form-horizontal">
               <div class="form-group">
-                <label class="control-label col-sm-2" for="oprice">Price:</label>
-                <div class="col-sm-4">
+                <label class="control-label col-xs-3" for="oprice">Price:</label>
+                <div class="col-xs-4">
                   <input type="text" class="form-control" id="oprice" placeholder="Enter Price">
                 </div>
-                <div class="col-sm-4 checkbox">
+                <div class="col-xs-4 checkbox">
                   <label><input type="checkbox" value="" id="mktprice">Market Price</label>
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-2 small" for="uaddr1">BKS Addr:</label>
-                <div class="col-sm-7">
+                <label class="control-label col-xs-3 small" for="uaddr1">BKS Addr:</label>
+                <div class="col-xs-8">
                   <input type="text" class="form-control input-sm" id="uaddr1" placeholder="Enter your address">
                 </div>
 
               </div>
                 <div class="form-group">
 
-                <label class="control-label col-sm-2 small" for="uaddr2">BTC Addr:</label>
-                <div class="col-sm-7">
+                <label class="control-label col-xs-3 small" for="uaddr2">BTC Addr:</label>
+                <div class="col-xs-8">
                   <input type="text" class="form-control input-sm" id="uaddr2" placeholder="Enter your address">
                 </div>
               </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-4">
+              <div class="row form-group">
+                <div class="col-xs-offset-2 col-xs-4">
                     <button type="button" class="btn btn-success btn-lg" id="buyBtn">BUY BKS</button>
                 </div>
-                <div class="col-sm-offset-2 col-sm-4">
+                <div class="col-xs-offset-1 col-xs-4">
                     <button type="button" class="btn btn-danger btn-lg" id="sellBtn">SELL BKS</button>
                 </div>
               </div>
@@ -133,21 +133,21 @@
               <p>Set up your addresses:<br/></p>
 
               <div class="form-group">
-                <label class="control-label col-sm-2 small" for="suaddr1">BKS Addr:</label>
-                <div class="col-sm-7">
+                <label class="control-label col-xs-3 small" for="suaddr1">BKS Addr:</label>
+                <div class="col-xs-8">
                   <input type="text" class="form-control" id="suaddr1" placeholder="Enter your address">
                 </div>
 
               </div>
                  <div class="form-group">
 
-                <label class="control-label col-sm-2 small" for="suaddr2">BTC Addr:</label>
-                <div class="col-sm-7">
+                <label class="control-label col-xs-3 small" for="suaddr2">BTC Addr:</label>
+                <div class="col-xs-8">
                   <input type="text" class="form-control" id="suaddr2" placeholder="Enter your address">
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-4">
+                <div class="col-xs-offset-3 col-xs-4">
                   <button type="button" class="btn btn-default btn-lg" id="setBtn">Save</button>
                 </div>
 
