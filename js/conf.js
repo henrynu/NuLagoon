@@ -1,7 +1,7 @@
 var APIURL="https://api.nulagoon.com/v1/";
 var CCY1="BKS"; var CCY2="mBTC";
 var TXURL={"mBTC":"https://blockchain.info/tx/","BKS":"http://bcblockexplorer.com/transactions/"};
-var ORDERAMT ={"mBTC":"0.1","BKS":"10"};
+var ORDERAMT ={"mBTC":"0.1","BKS":"0.1"};
 
 var OBTBLCOL = [
   {"name":"b_s","title":"","formatter":'obbsfmt'},
