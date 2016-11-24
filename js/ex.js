@@ -70,11 +70,14 @@ function mynum(value){
 
 }
 function confmt(value){
-    if(value>=10){
+    if(value>=8){
         return '<span class="glyphicon glyphicon-check text-success"></span>';
+    }else if(value > 0){
+        return '<span class="label label-warning">'+value+'</span>';
     }else{
         return '<span class="label label-default">'+value+'</span>';
     }
+
 }
 function b_sfmt(value){
     if(value=='Buy'){
