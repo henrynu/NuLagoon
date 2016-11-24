@@ -3,6 +3,10 @@ var CCY1="BKS"; var CCY2="mBTC";
 var TXURL={"mBTC":"https://blockchain.info/tx/","BKS":"http://bcblockexplorer.com/transactions/"};
 var ORDERAMT ={"mBTC":"0.1","BKS":"0.1"};
 
+if( $("html").hasClass("IE89") ) {
+ APIURL = '//crossorigin.me/'+APIURL;
+};
+
 var OBTBLCOL = [
   {"name":"b_s","title":"","formatter":'obbsfmt'},
   {"name":"price","title":"Price","type":"number","style":{"width":90,"maxWidth":90}},
