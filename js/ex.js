@@ -285,6 +285,7 @@ function NewOrder(b_s,ccy1,ccy2,price,receive_ad,refund_ad) {
         type: "GET",
         url: APIURL+'new_order?b_s='+b_s+'&ccys='+ccy1+'_'+ccy2+'&price='+price+'&receive_ad='+receive_ad+'&refund_ad='+refund_ad,
         dataType: "json",
+        crossDomain: true,
         error: function(data) {
         },
         success: function(data) {
@@ -305,6 +306,7 @@ function UpdatePubdata(ccy1,ccy2){
         type: "GET",
         url: APIURL+'pubdata?ccys='+ccy1+'_'+ccy2,
         dataType: "json",
+        crossDomain: true,
         error: function(data) {
         },
         success: function(data) {
@@ -330,6 +332,7 @@ function UpdateTxHis(ccy1,ccy2){
         type: "GET",
         url: APIURL+'extxs?ccys='+ccy1+'_'+ccy2,
         dataType: "json",
+        crossDomain: true,
         error: function(data) {
         },
         success: function(data) {
@@ -342,6 +345,7 @@ function UpdateMyOrder(ccy1,ccy2,addr1,addr2){
         type: "GET",
         url: APIURL+'my_orders?ccys='+ccy1+'_'+ccy2+'&addr1='+addr1+'&addr2='+addr2,
         dataType: "json",
+        crossDomain: true,
         error: function(data) {
         },
         success: function(data) {
@@ -355,6 +359,7 @@ function UpdateMyTrade(ccy1,ccy2,addr1,addr2){
         type: "GET",
         url: APIURL+'my_trades?ccys='+ccy1+'_'+ccy2+'&addr1='+addr1+'&addr2='+addr2,
         dataType: "json",
+        crossDomain: true,
         error: function(data) {
         },
         success: function(data) {
@@ -367,6 +372,7 @@ function UpdateMyBCTx(ccy1,ccy2,addr1,addr2){
         type: "GET",
         url: APIURL+'my_bctxs?ccys='+ccy1+'_'+ccy2+'&addr1='+addr1+'&addr2='+addr2,
         dataType: "json",
+        crossDomain: true,
         error: function(data) {
         },
         success: function(data) {
