@@ -125,14 +125,14 @@ function DrawPage(rawData) {
                 left: 40,
                 right: 10,
                 height: '82%',
-                top:5,
-                bottom: 10
+                top:'2%',
+                bottom: '5%'
             },
             {
                 left: 40,
                 right: 10,
-                top: 192,
-                bottom: 10,
+                top: '54%',
+                bottom: '5%',
                 height: '30%'
             }
         ],
