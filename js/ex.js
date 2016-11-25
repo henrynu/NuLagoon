@@ -495,10 +495,12 @@ $(document).ready(function(){
         $("#OdModal .nob_s").html("Buy");
         $("#OdModal .notoccy").html("BKS");
         $("#OdModal .nofrmccy").html("BTC");
-        $("#OdModal .noprice").html($("#oprice").val());
+        var rp = Math.round(100000*$("#oprice").val())/100000;
+        $("#oprice").val(rp)
+        $("#OdModal .noprice").html(rp);
         $("#OdModal .touaddr").html($("#uaddr1").val());
         $("#OdModal .frmuaddr").html($("#uaddr2").val());
-        NewOrder('Buy',"BKS","mBTC",$("#oprice").val(),$("#uaddr1").val(),$("#uaddr2").val())
+        NewOrder('Buy',"BKS","mBTC",rp,$("#uaddr1").val(),$("#uaddr2").val())
         $("#OdModal").modal("show");
     });
 
@@ -507,10 +509,12 @@ $(document).ready(function(){
         $("#OdModal .nob_s").html("Sell");
         $("#OdModal .notoccy").html("mBTC");
         $("#OdModal .nofrmccy").html("BKS");
-        $("#OdModal .noprice").html($("#oprice").val());
+        var rp = Math.round(100000*$("#oprice").val())/100000;
+        $("#oprice").val(rp)
+        $("#OdModal .noprice").html(rp);
         $("#OdModal .touaddr").html($("#uaddr2").val());
         $("#OdModal .frmuaddr").html($("#uaddr1").val());
-        NewOrder('Sell',"BKS","mBTC",$("#oprice").val(),$("#uaddr2").val(),$("#uaddr1").val())
+        NewOrder('Sell',"BKS","mBTC",rp,$("#uaddr2").val(),$("#uaddr1").val())
         $("#OdModal").modal("show");
     });
 
