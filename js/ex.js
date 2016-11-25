@@ -264,7 +264,7 @@ function DrawPage(rawData) {
         window.onresize = function () {
             myChart.resize();
         }
-    },200);
+    },500);
 }
 
 var noqrcode = new QRCode(document.getElementById("noqrcode"), {
